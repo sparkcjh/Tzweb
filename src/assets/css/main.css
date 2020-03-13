@@ -1,0 +1,311 @@
+.logo-align{
+  text-align: left;
+}
+/* 下拉按钮 */
+.to-button{
+  padding:15px 0;
+
+}
+.to-button > img{
+  width: 30px;
+  height: 30px;
+}
+.el-product-phone{
+  text-align: center;
+}
+.padding-block{
+  padding:0 20px;
+}
+.operate-block{
+  background-color: white;
+  padding:40px 0;
+}
+.container-fluid{
+  margin: 0;
+  padding: 0;
+}
+/* // 字体大小 */
+.logo-img{
+  width: 83px;
+  height: 36px;
+  margin:10px 0;
+}
+
+/* // 微导航 */
+.mynav-div-phone{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-button{
+  text-align: right;
+}
+.nav-button img{
+  width:16px;
+  height: 12px;
+  /* background-color: black; */
+}
+.mynav-slide-item a{
+  text-decoration: none;
+  color: #333;
+}
+.foot-vision-div a{
+  text-decoration: none;
+  color: #666;
+}
+.mynav-slide-item a:hover,.foot-vision-div a:hover{
+  text-decoration: none;
+}
+.mynav-slide-item a:link,.foot-vision-div a:hover{
+  text-decoration: none;
+}
+/* // 导航样式 */
+.mynav{
+  display: flex;
+  align-items: center;
+}
+.mynav div{
+  padding:1em 0;
+}
+.nav-mine{
+  display: flex;
+}
+.nav-mine li{
+  list-style-type: none;
+  padding:0 25px;
+}
+.nav-mine li a{
+  color: #666666;
+  /* text-decoration:none; */
+  padding:10px 0;
+}
+.nav-mine li a:hover{
+  text-decoration:none;
+  color: #B40006;
+  border-bottom: 2px solid #B40006;
+}
+.nav-mine li a:link{
+  text-decoration:none;
+}
+.nav-mine .active{
+  color: #B40006;
+  border-bottom: 2px solid #B40006;
+}
+
+ /* 导航图 */
+
+/* 图文简介 */
+
+.title{
+  padding:30px 0;
+  text-align: center;
+  /* margin-top:30px; */
+  font-size: 20px;
+}
+
+.icon-text{
+  padding:18px 0;
+  background-color: white;
+}
+.img-block > img{
+  width: 100%;
+  height: 100%;
+  /* height: 250px; */
+  display: block;
+}
+.title-company{
+  /* text-align: center; */
+}
+.company-content{
+  padding-bottom: 10px;
+  font-size: 13px;
+}
+.company-title{
+  padding:10px 20px;
+  text-align: left;
+}
+.company-subtitle{
+  padding:10px 20px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.button-more{
+  display: inline-block;
+  font-size: 12px;
+  color:#B40006;
+  padding:10px 40px;
+  margin:0 20px;
+  border:1px solid #B40006;
+  border-radius: 20px;
+}
+/* 图文盒子 */
+/* // 合作伙伴 */
+.operate-img{
+  display: inline-block;
+  height: 4.5em;
+}
+.operate-img img{
+  width: 75%;
+  height: 85%;
+  border:1px solid #F5F5F5;
+  background-color: white;
+  box-shadow: 0px 1px 3px #F6F6F6;
+}
+/* // 尾部 */
+.foot{
+  padding-top: 30px;
+  background-color: #333333;
+}
+.foot-text{
+  text-align: left;
+  color:#ddd;
+  clear: both;
+}
+.foot-title{
+  padding:5px 0;
+}
+.foot-ul{
+  margin:0;
+  padding:0;
+  font-size: 12px;
+  color: #999;
+}
+.foot-ul li{
+  text-align: left;
+  list-style-type: none;
+  padding:10px 0;
+}
+/* // 版权申明 */
+.foot-vision{
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  padding:20px;
+  color: #666666;
+}
+
+.block-company-describe{
+  background-color: white;
+  padding:60px 0;
+}
+.block-company-source{
+  background-color: #F7F7FA;
+  padding:60px 0;
+}
+.block-sign{
+  background-color: white;
+}
+.block-sign{
+  background-color: white;
+}
+.block-exmaple{
+  background-color:  #F7F7FA;
+}
+/* 图文盒子 */
+.white-img{
+
+}
+
+.mynav-slide-item .active{
+  color: #B40006;
+}
+.block-more{
+  width: 100%;
+  padding:40px;
+}
+.foot-ul a:link{
+  text-decoration: none;
+  color: #999;
+}
+.foot-ul a:hover{
+  text-decoration: none;
+  color: #ddd;
+}
+.foot-ul a{
+  text-decoration: none;
+    color: #999;
+}
+.foot-img{
+  margin-top: 5px;
+  display: none;
+}
+.block-re{
+  /* width: 100%; */
+  position: relative;
+}
+.head-text{
+  position: absolute;
+  top:45%;
+  width: 100%;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing:15px;
+}
+.el-carous-img {
+  text-align: left;
+}
+.padding-top-bottom{
+  /* padding-top:30px; */
+  padding-bottom: 30px;
+}
+/* a{
+  color: #999;
+  text-decoration: none;
+}
+a:active{
+  color: #999;
+  text-decoration: none;
+}
+a:link{
+  color: #999;
+  text-decoration: none;
+}
+a:hover{
+  color: #999;
+  text-decoration: none;
+} */
+.phone-number{
+  color: white;
+  text-decoration: none;
+}
+.phone-number:active{
+  color: white;
+  text-decoration: none;
+}
+.phone-number:link{
+  color: white;
+  text-decoration: none;
+}
+.phone-number:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.mynav-phone{
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: white;
+}
+.foot-address-phone {
+  position: fixed;
+}
+.head-img{
+
+}
+.foot-vision{
+  text-align: center;
+  /* display: flex;
+  clear: both; */
+}
+.foot-text{
+  display: flex;
+  justify-content: space-between;
+}
+.nav-button,.mynav-slide-div-close-div{
+  padding:18px 0 18px 18px;
+}

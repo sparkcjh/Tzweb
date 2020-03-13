@@ -1,0 +1,659 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>关于我们-通众传媒</title>
+  <meta name="keywords" content="通众传媒,通众网,通众广告,电梯媒体,电梯公告栏,公告栏媒体,小区公告栏,社区公告栏,物业公告栏" />
+  <meta name="description" content="通众传媒是致力于开发电梯媒体和广告发布的专业社区电梯公告栏媒体公司，公告栏媒体是安装在社区高层住宅电梯等候厅电梯口的创新媒体，以传播效果好、广告关注率高的显著特点成为有特色、性价比高的电梯媒体。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=yes">
+</head>
+<body>
+
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/vue.js"></script>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  <script src="./assets/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="./assets/css/element.css">
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/element.js"></script>
+
+
+<link rel="stylesheet" href="./assets/css/main.css">
+<link rel="stylesheet" href="./assets/css/common.css">
+<link rel="stylesheet" href="./assets/css/head.css">
+
+<style>
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 150px;
+    margin: 0;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+     background-color: #99a9bf;
+  }
+
+  .el-carousel__item:nth-child(2n+1) {
+     background-color: #d3dce6;
+  }
+  .no-fixed{
+    width: 100%;
+    position: relative;
+  }
+  .no-flex{
+    display: block;
+  }
+  .no-flex li{
+    width: 100%;
+  }
+
+  .img-block > .big-img{
+    display: block;
+    vertical-align: top;
+  }
+  .step-item-left{
+    margin-right: 120px;
+    text-align: right;
+    padding-right: 15px;
+  }
+  .step-item-right{
+    margin-left: 120px;
+    text-align: left;
+    padding-left: 15px;
+  }
+  .step-item-title{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .step-item-subtitle{
+    /* font-size: 16px; */
+    color: #666666;
+    line-height: 25px;
+  }
+  .step-b{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  .step-block{
+      text-align: center;
+  }
+  .step-block-title{
+    font-size: 16px;
+    padding:20px;
+    font-weight: bold;
+  }
+  .step-block-subtitle{
+    width: 600px;
+    text-align: left;
+    line-height: 30px;
+  }
+
+  /* 手机版步骤条 */
+  .step-b-phone{
+    width: 100%;
+  }
+  .step-item-phone{
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .step-item-left-phone{
+    width: 14%;
+    text-align: left;
+  }
+  .step-item-right-phone{
+    width: 70%;
+    text-align: left;
+    padding:0 15px;
+  }
+  .step-bar .step-item-phone i{
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    /* border:2px solid  #B40006; */
+    border-radius: 7px;
+    background-color: #B40006;
+    /* margin: 0 80px; */
+  }
+  /* // 垂直画线 */
+  .step-bar .step-item-phone i::after {
+    content: '';
+    display: block;
+    clear: both;
+    width: 1px;
+    height: 80px;
+    background-color: #F5F5F5;
+    margin: 10px auto;
+  }
+  .step-block-title-phone{
+    padding-bottom:  20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .step-item-phone{
+    padding-bottom: 30px;
+  }
+  .step-item-subtitle-phone{
+
+  }
+  .step-item-title-phone{
+    font-size: 15px;
+    color: #999999;
+    text-align: left;
+    display: block;
+  }
+  .no-margin-bottom{
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .step-item-rtitle-phone{
+    margin-bottom: 10px;
+  }
+  /* .step-block-phone{
+    padding:0 ;
+  } */
+  .step-block-phone{
+    padding:60px 20px;
+  }
+  .foot-address-phone {
+    position: fixed;
+    z-index:9;
+  }
+</style>
+<link rel="stylesheet" href="./assets/css/ipad.css">
+
+  <div class="container-fluid" id="vue">
+    <!-- logo及导航 -->
+    <div class="mynav padding-center-pc">
+      <div class="col-lg-2 logo-align"><a href="index.html"><img src="./assets/img/logo2.png" class="logo-img logo-img-pc" alt="通众传媒"/></a></div>
+      <div class="">
+        <ul class="nav-mine">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="about.html" class="active">关于我们</a></li>
+          <li><a href="describe.html">媒体介绍</a></li>
+          <li><a href="adavance.html">媒体优势</a></li>
+          <li><a href="distribute.html">资源布局</a></li>
+          <li><a href="news.html">新闻中心</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 微导航 -->
+    <div class="mynav-phone block-phone" style="position:relative;z-index:9;">
+      <div class="mynav-div-phone">
+        <a href="index.html"><img src="./assets/img/logo2.png" class="logo-img"  alt="通众传媒"/></a>
+        <div class="nav-button"><img src="./assets/img/slide_button.png"/></div>
+      </div>
+    </div>
+    <div class="mynav-phone">
+      <!-- <div class="col-xs-1 col-sm-1 col-md-1"></div> -->
+      <div class="mynav-div-phone">
+        <a href="index.html"><img src="./assets/img/logo2.png" class="logo-img"  alt="通众传媒"/></a>
+        <div class="nav-button" v-on:click="clickOpenSlide"><img src="./assets/img/slide_button.png"/></div>
+      </div>
+    </div>
+    <div class="mynav-slide-bg" v-if="openSlide" @click="clickCloseSlide"></div>
+    <div class="mynav-slide" v-if="openSlide">
+      <div class="mynav-slide-div">
+        <!-- <a href="index.html"><img class="mynav-slide-div-logo" src="./assets/img/logo2.png"/></a> -->
+        <div @click="clickCloseSlide" class="mynav-slide-div-close-div">
+          <img class="mynav-slide-div-close" src="./assets/img/close.png" />
+        </div>
+      </div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="index.html">首页</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="about.html" class="active">关于我们</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="describe.html">媒体介绍</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="adavance.html">媒体优势</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="distribute.html">资源布局</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="news.html">新闻中心</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="contact.html">联系我们</a></div>
+      <div class="mynav-slide-item-foot">
+        <div class="foot-address-phone" v-if="openSlide">
+            <img src="./assets/img/up.png" />
+            <div><a class="phone-number" href='tel:4000-055-066'>4000-055-066 电话咨询</a></div>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="block-re">
+          <div class="head-text">关于我们</div>
+          <!-- <img class="head-img" src="./assets/img/about.jpg"/> -->
+          <div class="head-img block-pc" style="background:url(./assets/img/about.jpg) no-repeat center;background-size:cover;"></div>
+          <div class="head-img head-img-phone block-phone block-midphone" style="background: url(./assets/img/about.jpg) no-repeat center;background-size:cover;"></div>
+
+      </div>
+    <!--图文 1 -->
+      <div class="block-company-describe padding-center-pc block-company-source-pc padding-top-bottom">
+          <div class="title">公司简介</div>
+          <div class="title-company">
+              <div class="" style="width:auto;"><img class="company-img" src="./assets/img/index_describe.jpg"  alt="公司简介"/></div>
+              <div class="company-content">
+                  <div class="company-title">通众传媒是一家全国性的专业电梯媒体广告公司，致力于全国中高端的社区媒体开发和社区广告发布。</div>
+                  <div class="company-subtitle" style="margin-bottom:0;">电梯公告栏媒体是公司独家开发且拥有国家专利的媒体形式，已全面覆盖了北京、上海、广州、深圳、南京、杭州、天津、成都、武汉、
+                    苏州、合 肥等二十几个重点城市、近十万栋高层社区楼宇，每天影响近亿商务白领人群。</div>
+                  <div class="company-subtitle" style="margin-bottom:0;">通众传媒已成为最具特色、性价比最高、覆盖面最广、末端传播效果最好的新型社区电梯媒体</div>
+              </div>
+          </div>
+      </div>
+    <!--图文  2-->
+      <div class="block-company-source padding-center-pc block-company-source-pc padding-top-bottom">
+          <div class="title">公司规模</div>
+          <div class="title-company">
+              <div class="company-content">
+                  <div class="company-title">通众传媒旗下在北京、上海、广州、深圳、南京、杭州、天津、成都、武汉、苏州、合肥全国十余个重点一线城市成立子公司，广东惠州、东莞、 佛山、中山、珠海设有办事处。</div>
+                  <div class="company-subtitle" style="margin-bottom:0;">目前公司共有员工近400人，设有大客户部、销售部、拓展部、工程部、安装部、媒介设计部、电销事业部、财务部、人力资源部等部门。</div>
+              </div>
+              <div class=""><img class="company-img" src="./assets/img/index_aduit.jpg" alt="公司规模"/></div>
+          </div>
+      </div>
+
+    <!--图文 1 -->
+      <div class="block-company-describe block-company-source-phone">
+          <div class="title">公司简介</div>
+          <div class="title-company">
+              <div class="col-lg-4" style="width:auto;"><img class="company-img" src="./assets/img/index_describe.jpg" alt="公司简介"/></div>
+              <div class="col-lg-4 company-content">
+                  <div class="company-title">通众传媒是一家全国性的专业电梯媒体广告公司，致力于全国中高端的社区媒体开发和社区广告发布。</div>
+                  <div class="company-subtitle" style="margin-bottom:0;">电梯公告栏媒体是公司独家开发且拥有国家专利的媒体形式，已全面覆盖了北京、上海、广州、深圳、南京、杭州、天津、成都、武汉、
+                    苏州、合 肥等二十几个重点城市、近十万栋高层社区楼宇，每天影响近亿商务白领人群。</div>
+                  <div class="company-subtitle" style="margin-bottom:0;">通众传媒已成为最具特色、性价比最高、覆盖面最广、末端传播效果最好的新型社区电梯媒体。</div>
+              </div>
+          </div>
+      </div>
+    <!--图文  2-->
+      <div class="block-company-source block-company-source-phone">
+          <div class="title">公司规模</div>
+          <div class="title-company">
+            <div class="col-lg-4"><img class="company-img" src="./assets/img/index_aduit.jpg" alt="公司规模"/></div>
+              <div class="col-lg-4 company-content">
+                  <div class="company-title">通众传媒旗下在北京、上海、广州、深圳、南京、杭州、天津、成都、武汉、苏州、合肥全国十余个重点一线城市成立子公司，广东惠州、东莞、 佛山、中山、珠海设有办事处。</div>
+                  <div class="company-subtitle" style="margin-bottom:0;">目前公司共有员工近400人，设有大客户部、销售部、拓展部、工程部、安装部、媒介设计部、电销事业部、财务部、人力资源部等部门。</div>
+              </div>
+          </div>
+      </div>
+
+
+    <!-- 步骤条 -->
+
+    <div class="step-block step-block-pc padding-top-bottom">
+      <div class="step-b">
+        <div class="step-block-title">发展历史</div>
+        <div class="step-block-subtitle">历经多年发展，通众传媒始终坚持电梯公告栏专业媒体的创业理想和愿景，通过多次主动革新，使企业跃上新的发展平台。</div>
+      </div>
+      <ul class="step-bar">
+          <li class="step-item-front"><div class="step-item-left"></div><i></i><div class="step-item-right"></div></li>
+          <!-- 左右风格 -->
+          <li class="step-item">
+            <div class="step-item-left">
+              <div class="step-item-title"></div>
+              <div class="step-item-subtitle"></div>
+            </div>
+            <i></i>
+            <span></span>
+            <div class="step-item-right">
+              <div class="step-item-title">2018年</div>
+              <div class="step-item-subtitle">12月 - 合肥分公司成立。</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-item-left">
+              <div class="step-item-title">2016年</div>
+              <div class="step-item-subtitle">01月 - 成都和武汉分公司分别成立。</div>
+            </div>
+            <i class="line-left"></i>
+            <span class="span-left"></span>
+            <div class="step-item-right">
+              <div class="step-item-title"></div>
+              <div class="step-item-subtitle"></div>
+            </div>
+          </li>
+          <!-- 左右风格 -->
+          <li class="step-item">
+            <div class="step-item-left">
+              <div class="step-item-title"></div>
+              <div class="step-item-subtitle"></div>
+            </div>
+            <i></i>
+            <span></span>
+            <div class="step-item-right">
+              <div class="step-item-title">2015年</div>
+              <div class="step-item-subtitle">05月 - 成立南京分公司。</div>
+              <div class="step-item-subtitle">09月 - 成立杭州分公司。</div>
+              <div class="step-item-subtitle">12月 - 分别成立苏州和天津分公司。</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-item-left">
+              <div class="step-item-title">2013年</div>
+              <div class="step-item-subtitle">01月 - 上海分公司成立。</div>
+              <div class="step-item-subtitle">04月 - 北京分公司成立。</div>
+            </div>
+            <i class="line-left"></i>
+            <span class="span-left"></span>
+            <div class="step-item-right">
+              <div class="step-item-title"></div>
+              <div class="step-item-subtitle"></div>
+            </div>
+          </li>
+          <!-- 左右风格 -->
+          <li class="step-item">
+            <div class="step-item-left">
+              <div class="step-item-title"></div>
+              <div class="step-item-subtitle"></div>
+            </div>
+            <i></i>
+            <span></span>
+            <div class="step-item-right">
+              <div class="step-item-title">2012年</div>
+              <div class="step-item-subtitle">01月 - 成立东莞、佛山、中山、珠海、惠州分公司。</div>
+              <div class="step-item-subtitle">09月 - 成立杭州分公司。</div>
+              <div class="step-item-subtitle">12月 - 分别成立苏州和天津分公司。</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-item-left">
+              <div class="step-item-title">2011年</div>
+              <div class="step-item-subtitle">03月 - 公司进入珠海、中山、江门等地市场。</div>
+              <div class="step-item-subtitle">12月 - 公司进入阳江、河源、肇庆等地市场。</div>
+            </div>
+            <i class="line-left"></i>
+            <span class="span-left"></span>
+            <div class="step-item-right">
+              <div class="step-item-title"></div>
+              <div class="step-item-subtitle"></div>
+            </div>
+          </li>
+          <!-- 左右风格 -->
+          <li class="step-item">
+            <div class="step-item-left">
+              <div class="step-item-title"></div>
+              <div class="step-item-subtitle"></div>
+            </div>
+            <i></i>
+            <span></span>
+            <div class="step-item-right">
+              <div class="step-item-title">2009年</div>
+              <div class="step-item-subtitle">01月 - 广州市通众广告有限公司成立。</div>
+              <div class="step-item-subtitle">02月 - 进入广州市场，并迅速覆盖广州大部分高层社区楼宇。</div>
+              <div class="step-item-subtitle">06月 - 公司进入东莞、惠州、佛山等地市场。 </div>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-item-left">
+              <div class="step-item-title">2008年</div>
+              <div class="step-item-subtitle">07月 - 覆盖深圳大部分高层社区楼宇。</div>
+              <!-- <div class="step-item-subtitle">12月 - 公司进入阳江、河源、肇庆等地市场。</div> -->
+            </div>
+            <i class="line-left"></i>
+            <span class="span-left"></span>
+            <div class="step-item-right">
+              <div class="step-item-title"></div>
+              <div class="step-item-subtitle"></div>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-item-left">
+              <div class="step-item-title"></div>
+              <div class="step-item-subtitle"></div>
+            </div>
+            <i></i>
+            <span></span>
+            <div class="step-item-right">
+              <div class="step-item-title">2007年</div>
+              <div class="step-item-subtitle">08月 - 通众公告栏媒体成功申请专利。</div>
+            </div>
+          </li>
+      </ul>
+    </div>
+
+    <!-- 手机版的步骤条 -->
+    <div class="step-block step-block-phone">
+      <div class="step-b-phone">
+        <div class="step-block-title-phone">发展历史</div>
+        <!-- <div class="step-block-subtitle-phone">历经多年发展，通众传媒始终坚持电梯公告栏专业媒体的创业理想和愿景，通过多次主动革新，使企业跃上新的发展平台。</div> -->
+      </div>
+      <ul class="step-bar">
+          <!-- <li class="step-item-front"><div class="step-item-left"></div><i></i><div class="step-item-right"></div></li> -->
+          <li class="step-item-phone step-item-title-phone no-margin-bottom">2018年</li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <div class="step-item-subtitle-phone">12月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-subtitle-phone">合肥分公司成立。</div>
+              <!-- <div class="step-item-subtitle-phone">12月 - 合肥分公司成立。</div> -->
+            </div>
+          </li>
+          <li class="step-item-phone step-item-title-phone no-margin-bottom">2016年</li>
+          <li class="step-item-phone" style="align-items: first baseline;">
+            <div class="step-item-left-phone">
+              <div class="step-item-subtitle-phone">01月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-rtitle-phone">成都分公司分别成立。</div>
+              <div class="step-item-rtitle-phone">武汉分公司分别成立。</div>
+            </div>
+          </li>
+          <li class="step-item-phone step-item-title-phone no-margin-bottom">2015年</li>
+          <li class="step-item-phone" style="align-items: first baseline;">
+            <div class="step-item-left-phone">
+              <div class="step-item-subtitle-phone">12月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-rtitle-phone">天津分公司成立。</div>
+              <div class="step-item-rtitle-phone">苏州分公司成立。</div>
+            </div>
+          </li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <!-- <div class="step-item-title-phone"></div> -->
+              <div class="step-item-subtitle-phone">09月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-subtitle-phone">杭州分公司成立。</div>
+            </div>
+          </li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <!-- <div class="step-item-title-phone"></div> -->
+              <div class="step-item-subtitle-phone">05月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-subtitle-phone">南京分公司成立。</div>
+            </div>
+          </li>
+
+          <li class="step-item-phone step-item-title-phone no-margin-bottom">2013年</li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <div class="step-item-subtitle-phone">01月</div>
+              <!-- <div class="step-item-subtitle-phone">04月</div> -->
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-subtitle-phone">上海分公司成立</div>
+              <!-- <div class="step-item-title-phone">北京分公司成立</div> -->
+            </div>
+          </li>
+          <li class="step-item-phone step-item-title-phone no-margin-bottom">2013年</li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <!-- <div class="step-item-subtitle-phone">01月</div> -->
+              <div class="step-item-subtitle-phone">04月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <!-- <div class="step-item-title-phone">上海分公司成立</div> -->
+              <div class="step-item-subtitle-phone">北京分公司成立</div>
+            </div>
+          </li>
+          <li class="step-item-phone step-item-title-phone no-margin-bottom">2012年</li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <div class="step-item-subtitle-phone">01月</div>
+              <!-- <div class="step-item-subtitle-phone">04月</div> -->
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-subtitle-phone">成立东莞、佛山、中山、珠海、惠州分公司</div>
+              <!-- <div class="step-item-title-phone">北京分公司成立</div> -->
+            </div>
+          </li>
+          <li class="step-item-phone step-item-title-phone no-margin-bottom">2011年</li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <div class="step-item-subtitle-phone">03月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-subtitle-phone">公司进入珠海、中山、江门等地市场</div>
+            </div>
+          </li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <div class="step-item-subtitle-phone">06月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-subtitle-phone">公司进入东莞、惠州、佛山等地市场</div>
+            </div>
+          </li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <div class="step-item-subtitle-phone">02月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-subtitle-phone">进入广州市场，并迅速覆盖广州大部分高层 社区楼宇</div>
+            </div>
+          </li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <div class="step-item-subtitle-phone">01月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-subtitle-phone">广州市通众广告有限公司成立</div>
+            </div>
+          </li>
+          <li class="step-item-phone step-item-title-phone no-margin-bottom">2008年</li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <div class="step-item-subtitle-phone">07月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-subtitle-phone">覆盖深圳大部分高层社区楼宇</div>
+            </div>
+          </li>
+          <li class="step-item-phone step-item-title-phone no-margin-bottom">2008年</li>
+          <li class="step-item-phone">
+            <div class="step-item-left-phone">
+              <div class="step-item-subtitle-phone">07月</div>
+            </div>
+            <i></i>
+            <div class="step-item-right-phone">
+              <div class="step-item-subtitle-phone">通众公告栏媒体成功申请专利</div>
+            </div>
+          </li>
+
+
+        </ul>
+
+    </div>
+
+    <!--尾部  -->
+    <div class="foot foot-phone padding-center-pc" style="padding-top:30px;">
+      <div class="">
+        <div class="foot-text foot-text-phone">
+          <div class="">
+            <div class="foot-title foot-title-phone">关于我们</div>
+            <ul class="foot-ul foot-ul-phone">
+              <li><a href="about.html">公司简介</a></li>
+              <li><a href="about.html">发展历程</a></li>
+              <li><a href="news.html">新闻中心</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <div class="foot-title foot-title-phone">媒体介绍</div>
+            <ul class="foot-ul foot-ul-phone">
+              <li><a href="describe.html">媒体形式</a></li>
+              <li><a href="adavance.html">媒体优势</a></li>
+              <li><a href="describe.html">服务流程</a></li>
+            </ul>
+          </div>
+          <div class="">
+              <div class="foot-title foot-title-phone">联系方式</div>
+              <ul class="foot-ul foot-ul-phone no-flex">
+                <li>服务热线： 4000-055-066（周一至周日 09:00-22:00）</li>
+                <!-- <li>商务合作： 138-8888-8888 </li> -->
+                <li>总部地址： 深圳市福田区沙头街道天安社区泰然七路泰然科技园苍松大厦508 </li>
+              </ul>
+          </div>
+          <div class="">
+            <div class="foot-title foot-title-phone-cooperate">关注公众号</div>
+            <img class="foot-img" src="./assets/img/website.png" alt="关注公众号"/>
+          </div>
+        </div>
+      </div>
+      <!-- 版权 -->
+      <div class="foot-vision foot-vision-phone">
+        <div class="foot-vision-div">(C) 2012-2020 通众传媒 版权所有</div>
+        <div  class="foot-vision-div"><a href="http://www.beian.miit.gov.cn/">ICP备案号： 粤ICP备13027485号</a></div>
+      </div>
+      <div class="foot-address-phone icon-item no-fixed" style="position:relative;">
+          <img src="./assets/img/up.png" alt="phone"/>
+          <div>4000-055-066 电话咨询</div>
+      </div>
+      <div class="foot-address-phone icon-item no-fixed">
+          <img src="./assets/img/up.png" alt="phone"/>
+          <div><a class="phone-number" href='tel:4000-055-066'>4000-055-066 电话咨询</a></div>
+      </div>
+    </div>
+    <!-- end 尾部 -->
+
+  </div>
+
+
+<script>
+let vue = new Vue({
+  el:"#vue",
+  data:{
+      arr :["首页","关于我们" ,"媒体介绍" ,"媒体优势" ,"网点布局" ,"新闻中心" ,"联系我们"],
+      selectIndex:1,
+      operateSum: 20,
+      openSlide:false,
+      isTrue:true,
+      wHeight: window.innerWidth,
+      routerAboutArr:['/describe','/about','/news'],
+      routerDescribeArr:['/describe','/describe','/adavance'],
+      routerArr:['/','/about','/describe','/adavance','/distribute','/news','/contact']
+
+  },
+  methods:{
+    select:function(index){
+      this.selectIndex = index;
+    },
+    clickOpenSlide:function(e){
+      this.openSlide = true;
+    },
+    clickCloseSlide:function(e){
+      this.openSlide = false;
+    }
+  }
+});
+</script>
+
+</body>
+</html>

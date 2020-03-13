@@ -1,0 +1,493 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>物业伙伴-通众传媒</title>
+  <meta name="keywords" content="通众传媒,通众网,通众广告,电梯媒体,电梯公告栏,公告栏媒体,小区公告栏,社区公告栏,物业公告栏" />
+  <meta name="description" content="通众传媒是致力于开发电梯媒体和广告发布的专业社区电梯公告栏媒体公司，公告栏媒体是安装在社区高层住宅电梯等候厅电梯口的创新媒体，以传播效果好、广告关注率高的显著特点成为有特色、性价比高的电梯媒体。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=yes">
+</head>
+<body>
+
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/vue.js"></script>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  <script src="./assets/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="./assets/css/element.css">
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/element.js"></script>
+
+
+<link rel="stylesheet" href="./assets/css/main.css">
+<link rel="stylesheet" href="./assets/css/common.css">
+<link rel="stylesheet" href="./assets/css/describe.css">
+
+  <div class="container-fluid" id="vue">
+    <!-- logo及导航 -->
+    <div class="mynav padding-center-pc">
+      <div class="col-lg-2 logo-align"><a href="index.html"><img src="./assets/img/logo2.png" class="logo-img logo-img-pc" alt="通众传媒"/></a></div>
+      <div class="">
+        <ul class="nav-mine">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="about.html" >关于我们</a></li>
+          <li><a href="describe.html">媒体介绍</a></li>
+          <li><a href="adavance.html">媒体优势</a></li>
+          <li><a href="distribute.html">资源布局</a></li>
+          <li><a href="news.html" >新闻中心</a></li>
+          <li><a href="contact.html" class="active">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 微导航 -->
+    <div class="mynav-phone block-phone" style="position:relative;z-index:9;">
+      <div class="mynav-div-phone">
+        <a href="index.html"><img src="./assets/img/logo2.png" class="logo-img" /></a>
+        <div class="nav-button"><img src="./assets/img/slide_button.png"/></div>
+      </div>
+    </div>
+    <div class="mynav-phone">
+      <!-- <div class="col-xs-1 col-sm-1 col-md-1"></div> -->
+      <div class="mynav-div-phone">
+        <a href="index.html"><img src="./assets/img/logo2.png" class="logo-img" alt="通众传媒" /></a>
+        <div class="nav-button" v-on:click="clickOpenSlide"><img src="./assets/img/slide_button.png"/></div>
+      </div>
+    </div>
+    <div class="mynav-slide-bg" v-if="openSlide" @click="clickCloseSlide"></div>
+    <div class="mynav-slide" v-if="openSlide">
+      <div class="mynav-slide-div">
+        <!-- <a href="index.html"><img class="mynav-slide-div-logo" src="./assets/img/logo2.png" alt="通众传媒"/></a> -->
+        <div @click="clickCloseSlide" class="mynav-slide-div-close-div">
+          <img class="mynav-slide-div-close" src="./assets/img/close.png" />
+        </div>
+      </div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="index.html">首页</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="about.html">关于我们</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="describe.html">媒体介绍</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="adavance.html">媒体优势</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="distribute.html">资源布局</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="news.html">新闻中心</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="contact.html" class="active">联系我们</a></div>
+      <div class="mynav-slide-item-foot">
+        <div class="foot-address-phone" v-if="openSlide">
+            <img src="./assets/img/up.png" />
+            <div><a class="phone-number" href='tel:4000-055-066'>4000-055-066 电话咨询</a></div>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="block-re">
+          <div class="head-text">联系我们</div>
+          <!-- <img class="head-img" src="./assets/img/contact.jpg"/> -->
+          <div class="head-img block-pc" style="background:url(./assets/img/contact.jpg) no-repeat center;background-size:cover;"></div>
+          <div class="head-img head-img-phone block-phone block-midphone" style="background: url(./assets/img/contact.jpg) no-repeat center;background-size:cover;"></div>
+          <!-- <img class="head-img head-img-phone block-phone block-minphone" src="./assets/img/adavance_phone.jpg" /> -->
+      </div>
+
+
+    <!--图文合子-->
+    <div class="title-icon block-exmaple padding-icon block-news-list padding-center-pc padding-top-bottom padding-ipad-contact">
+        <div class="">
+            <!-- <div class="col-lg-2"></div> -->
+            <div class="contactlist">
+              <figure class="img-block img-block-pc">
+                <img class="big-img contact-img-pc" src="./assets/img/shenzhen.jpg" style="width:100%;" alt="深圳总部"/>
+                <div class="block-text-i">
+                  <div class="icon-text-title padd-min">深圳总部</div>
+                  <div class="icon-text">电话：0755-82668555</div>
+                  <div class="icon-text">传真：0755-83939498</div>
+                  <div class="icon-subtext">地址：深圳市福田区沙头街道天安社区泰然七路泰然科技园苍松大厦508</div>
+                </div>
+              </figure>
+              <figure class="img-block img-block-pc">
+                <img class="big-img contact-img-pc" src="./assets/img/guangzhou.jpg" style="width:100%;" alt="广州分公司"/>
+                <div class="block-text-i">
+                  <div class="icon-text-title padd-min">广州分公司</div>
+                  <div class="icon-text">电话：020-84066666</div>
+                  <div class="icon-text">传真：020-34318666</div>
+                  <div class="icon-subtext">地址：广州市海珠区广州大道南和平家园和平三街27号首层</div>
+                </div>
+              </figure>
+              <figure class="img-block img-block-pc">
+                <img class="big-img contact-img-pc" src="./assets/img/shanghai.jpg" style="width:100%;" alt="上海分公司"/>
+                <div class="block-text-i">
+                  <div class="icon-text-title padd-min">上海分公司</div>
+                  <div class="icon-text">电话：021-60278888</div>
+                  <div class="icon-subtext">地址：上海市普陀区中山北路2130号万千大厦1706室</div>
+                  <div class="icon-text padding-bottom-25"> <label></label></div>
+                </div>
+              </figure>
+              <figure class="img-block img-block-pc">
+                <img class="big-img contact-img-pc" src="./assets/img/beijing.jpg" style="width:100%;" alt="北京分公司"/>
+                <div class="block-text-i">
+                  <div class="icon-text-title padd-min">北京分公司</div>
+                  <div class="icon-text">电话：010-64163299</div>
+                  <!-- <div class="icon-text"></div> -->
+                  <div class="icon-subtext">地址：北京市东城区十字坡街东城逸墅6号楼1单元601室</div>
+                  <div class="icon-text padding-bottom-25"></div>
+                </div>
+              </figure>
+              <figure class="img-block img-block-pc">
+                <img class="big-img contact-img-pc" src="./assets/img/nanjing.jpg" style="width:100%;" alt="南京分公司"/>
+                <div class="block-text-i">
+                  <div class="icon-text-title padd-min">南京分公司</div>
+                  <div class="icon-text">电话：025-86113396</div>
+                  <!-- <div class="icon-text"></div> -->
+                  <div class="icon-subtext">地址：南京市江宁区双龙大道1118号新都汇广场1-2栋905室</div>
+                  <div class="icon-text padding-bottom-25"></div>
+                </div>
+              </figure>
+              <figure class="img-block img-block-pc">
+                <img class="big-img contact-img-pc" src="./assets/img/hangzhou.jpg" style="width:100%;" alt="杭州分公司"/>
+                <div class="block-text-i">
+                  <div class="icon-text-title padd-min">杭州分公司</div>
+                  <div class="icon-text">电话：0571-87650651</div>
+                  <!-- <div class="icon-text"></div> -->
+                  <div class="icon-subtext">地址：杭州市下城区潮王路45号东方豪园文豪阁1602室</div>
+                  <div class="icon-text padding-bottom-25"></div>
+                </div>
+              </figure>
+              <figure class="img-block img-block-pc">
+                <img class="big-img contact-img-pc" src="./assets/img/chengdu.jpg" style="width:100%;" alt="成都分公司"/>
+                <div class="block-text-i">
+                  <div class="icon-text-title padd-min">成都分公司</div>
+                  <div class="icon-text">电话：028-86954842</div>
+                  <!-- <div class="icon-text">传真：无 </div> -->
+                  <div class="icon-subtext">地址：成都市青羊区锣锅巷122号云龙大厦1413室</div>
+                  <div class="icon-text padding-bottom-25"><label></label></div>
+                </div>
+              </figure>
+              <figure class="img-block img-block-pc">
+                <img class="big-img contact-img-pc" src="./assets/img/wuhan.jpg" style="width:100%;" alt="武汉分公司"/>
+                <div class="block-text-i">
+                  <div class="icon-text-title padd-min">武汉分公司</div>
+                  <div class="icon-text">电话：027-85638566</div>
+                  <div class="icon-subtext">地址：武汉市汉口解放大道688号武汉广场写字楼4208室</div>
+                  <div class="icon-text padding-bottom-25"><label></label></div>
+                </div>
+              </figure>
+              <figure class="img-block img-block-pc">
+                <img class="big-img contact-img-pc" src="./assets/img/foshan.jpg" style="width:100%;" alt="佛山办事处"/>
+                <div class="block-text-i">
+                  <div class="icon-text-title padd-min">佛山办事处</div>
+                  <div class="icon-text">电话：020-84039999</div>
+                  <div class="icon-text">传真：020-34318666</div>
+                  <div class="icon-subtext">地址：佛山市禅城区季华六路九鼎国际5座1319房</div>
+                </div>
+              </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新闻盒子  手机版 -->
+    <div class="title-icon block-exmaple padding-icon block-news-list-phone no-padding-top" style="position:relative;padding:15px 0;">
+
+            <div class="block-img-phone no-padding">
+              <img class="big-img-phone contact-img-phone" src="./assets/img/shenzhen.jpg" style="width:100%;" alt="深圳总部"/>
+              <div class="block-text-i">
+                <div class="icon-text-title">深圳总部</div>
+                <div class="img-block-phone">
+                  <div class="icon-text">电话：<span class="color-blue">0755-82668555</span></div>
+                  <div class="icon-text">传真：0755-83939498</div>
+                  <div class="icon-subtext no-padding-bottom">地址：深圳市福田区沙头街道天安社区泰然七路泰然科技园苍松大厦508</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-img-phone no-padding">
+              <img class="big-img-phone contact-img-phone" src="./assets/img/guangzhou.jpg" style="width:100%;" alt="广州分公司"/>
+              <div class="block-text-i">
+                <div class="icon-text-title">广州分公司</div>
+                <div class="img-block-phone">
+                  <div class="icon-text">电话：<span class="color-blue">020-84066666</span></div>
+                  <div class="icon-text">传真：020-34318666</div>
+                  <div class="icon-subtext no-padding-bottom">地址：广州市海珠区广州大道南和平家园和平三街27号首层</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-img-phone no-padding">
+              <img class="big-img-phone contact-img-phone" src="./assets/img/shanghai.jpg" style="width:100%;" alt="上海分公司"/>
+              <div class="block-text-i">
+                <div class="icon-text-title">上海分公司</div>
+                <div class="img-block-phone">
+                  <div class="icon-text">电话：<span class="color-blue">021-60278888</span></div>
+                  <!-- <div class="icon-text">传真：无</div> -->
+                  <div class="icon-subtext no-padding-bottom">地址：上海市普陀区中山北路2130号万千大厦1706室</div>
+                </div>
+              </div>
+            </div>
+            <div class="block-img-phone no-padding">
+              <img class="big-img-phone contact-img-phone" src="./assets/img/beijing.jpg" style="width:100%;" alt="北京分公司"/>
+              <div class="block-text-i">
+                <div class="icon-text-title">北京分公司</div>
+                <div class="img-block-phone">
+                  <div class="icon-text">电话：<span class="color-blue">010-64163299</span></div>
+                  <!-- <div class="icon-text">传真：无</div> -->
+                  <div class="icon-subtext no-padding-bottom">地址：北京市东城区十字坡街东城逸墅6号楼1单元601室</div>
+                </div>
+              </div>
+            </div>
+            <div class="block-img-phone no-padding">
+              <img class="big-img-phone contact-img-phone" src="./assets/img/nanjing.jpg" style="width:100%;" alt="南京分公司"/>
+              <div class="block-text-i">
+                <div class="icon-text-title">南京分公司</div>
+                <div class="img-block-phone">
+                  <div class="icon-text">电话：<span class="color-blue">025-86113396</span></div>
+                  <!-- <div class="icon-text">传真：无</div> -->
+                  <div class="icon-subtext no-padding-bottom">地址：南京市江宁区双龙大道1118号新都汇广场1-2栋905室</div>
+                </div>
+              </div>
+            </div>
+            <div class="block-img-phone no-padding">
+              <img class="big-img-phone contact-img-phone" src="./assets/img/hangzhou.jpg" style="width:100%;" alt="杭州分公司"/>
+              <div class="block-text-i">
+                <div class="icon-text-title">杭州分公司</div>
+                <div class="img-block-phone">
+                  <div class="icon-text">电话：<span class="color-blue">0571-87650651</span></div>
+                  <!-- <div class="icon-text">传真：无</div> -->
+                  <div class="icon-subtext no-padding-bottom">地址：杭州市下城区潮王路45号东方豪园文豪阁1602室</div>
+                </div>
+              </div>
+            </div>
+            <div class="block-img-phone no-padding">
+              <img class="big-img-phone contact-img-phone" src="./assets/img/chengdu.jpg" style="width:100%;" alt="成都分公司"/>
+              <div class="block-text-i">
+                <div class="icon-text-title">成都分公司</div>
+                <div class="img-block-phone">
+                  <div class="icon-text">电话：<span class="color-blue">028-86954842</span></div>
+                  <div class="icon-subtext no-padding-bottom">地址：成都市青羊区锣锅巷122号云龙大厦1413室</div>
+                </div>
+              </div>
+            </div>
+            <div class="block-img-phone no-padding">
+              <img class="big-img-phone contact-img-phone" src="./assets/img/wuhan.jpg" style="width:100%;" alt="武汉分公司"/>
+              <div class="block-text-i">
+                <div class="icon-text-title">武汉分公司</div>
+                <div class="img-block-phone">
+                  <div class="icon-text">电话：<span class="color-blue">027-85638566</span></div>
+                  <div class="icon-subtext no-padding-bottom">地址：武汉市汉口解放大道688号武汉广场写字楼4208室</div>
+                </div>
+              </div>
+            </div>
+            <div class="block-img-phone no-padding">
+              <img class="big-img-phone contact-img-phone" src="./assets/img/foshan.jpg" style="width:100%;" alt="佛山办事处"/>
+              <div class="block-text-i">
+                <div class="icon-text-title">佛山办事处</div>
+                <div class="img-block-phone">
+                  <div class="icon-text">电话：<span class="color-blue">020-84039999</span></div>
+                  <div class="icon-text">传真：020-34318666</div>
+                  <div class="icon-subtext no-padding-bottom">地址：佛山市禅城区季华六路九鼎国际5座1319房</div>
+                </div>
+              </div>
+            </div>
+
+    </div>
+
+
+
+    <!--尾部  -->
+    <div class="foot foot-phone padding-center-pc" style="padding-top:30px;">
+      <div class="">
+        <div class="foot-text foot-text-phone">
+          <div class="">
+            <div class="foot-title foot-title-phone">关于我们</div>
+            <ul class="foot-ul foot-ul-phone">
+              <li><a href="about.html">公司简介</a></li>
+              <li><a href="about.html">发展历程</a></li>
+              <li><a href="news.html">新闻中心</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <div class="foot-title foot-title-phone">媒体介绍</div>
+            <ul class="foot-ul foot-ul-phone">
+              <li><a href="describe.html">媒体形式</a></li>
+              <li><a href="adavance.html">媒体优势</a></li>
+              <li><a href="describe.html">服务流程</a></li>
+            </ul>
+          </div>
+          <div class="">
+              <div class="foot-title foot-title-phone">联系方式</div>
+              <ul class="foot-ul foot-ul-phone no-flex">
+                <li>服务热线： 4000-055-066（周一至周日 09:00-22:00）</li>
+                <!-- <li>商务合作： 138-8888-8888 </li> -->
+                <li>总部地址： 深圳市福田区沙头街道天安社区泰然七路泰然科技园苍松大厦508 </li>
+              </ul>
+          </div>
+          <div class="">
+            <div class="foot-title foot-title-phone-cooperate">关注公众号</div>
+            <img class="foot-img" src="./assets/img/website.png"/>
+          </div>
+        </div>
+      </div>
+      <!-- 版权 -->
+      <div class="foot-vision foot-vision-phone">
+        <div class="foot-vision-div">(C) 2012-2020 通众传媒 版权所有</div>
+        <div  class="foot-vision-div"><a href="http://www.beian.miit.gov.cn/">ICP备案号： 粤ICP备13027485号</a></div>
+      </div>
+      <div class="foot-address-phone icon-item no-fixed" style="position:relative;">
+          <img src="./assets/img/up.png"/>
+          <div><a class="phone-number" href='tel:4000-055-066'>4000-055-066 电话咨询</a></div>
+      </div>
+      <div class="foot-address-phone icon-item no-fixed">
+          <img src="./assets/img/up.png"/>
+        <div><a class="phone-number" href='tel:4000-055-066'>4000-055-066 电话咨询</a></div>
+      </div>
+    </div>
+    <!-- end 尾部 -->
+
+  </div>
+
+  <style>
+  .img-block-pc{
+    padding-bottom: 10px;
+  }
+  .img-block{
+    background-color: white;
+    width: 25%;
+    margin:10px 2%;
+  }
+  .img-block .icon-text,.block-img-phone .icon-text{
+    padding:5px 5px 2px 5px;
+    text-align: left;
+    font-size: 14px;
+    color: #666666 ;
+  }
+  .icon-subtext{
+    color: #666;
+    text-align: left;
+    font-size: 13px;
+    padding:0 5px;
+    /* padding-bottom: 10px; */
+    min-height: 34.3px;
+  }
+  .img-block-phone{
+    display: flex;
+    flex-direction: column;
+    padding:10px 5px;
+  }
+  .img-block > img{
+    height: 250px;
+  }
+  .big-img-phone{
+    width: 335px;
+    height: 250px;
+  }
+  .big-img{
+    /* border:1px dashed #999; */
+  }
+  .block-img-phone{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px 30px;
+    border-bottom: 1px solid #f7f7fa;
+  }
+  .icon-text-title{
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding:15px 0;
+    margin:0 10px;
+    border-bottom: 1px solid #F7F7FA;
+  }
+  .no-padding-bottom{
+    padding-bottom: 0;
+  }
+  .no-padding-top{
+    padding-top:0;
+  }
+  .no-padding{
+    padding:0;
+  }
+  .tips{
+    color:  #999999;
+    font-size: 13px;
+    padding:20px;
+    text-align: center;
+  }
+  .color-blue{
+    color:#8DC0F3
+  }
+  .padd-min{
+    padding:5px 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    color:  #333333 ;
+  }
+  .icon-text,.padding-bottom-25{
+    min-height: 20px;
+    /* line-height: 25px; */
+  }
+  .padding-bottom-25 label{
+    padding: 0;
+    margin: 0;
+  }
+  .el-carous-img{
+    width: 100%;
+    height: 220px;
+    background-color: white;
+  }
+  .el-carousel__indicator .el-carousel__button{
+    background-color:  #000000;
+    height: 6px;
+    border-radius: 6px;
+    opacity: 1;
+  }
+  .is-active .el-carousel__button{
+    background-color: #B40006;
+    height: 6px;
+    border-radius: 6px;
+      opacity:1;
+  }
+
+    .el-carous-img .el-carousel__item:nth-child(2n) {
+       background-color: white;
+    }
+
+     .el-carous-img .el-carousel__item:nth-child(2n+1) {
+       background-color: white;
+    }
+    .operate-block{
+      background-color: white;
+    }
+    .foot-address-phone {
+      position: fixed;
+      z-index:9;
+    }
+  </style>
+  <link rel="stylesheet" href="./assets/css/ipad.css">
+<script>
+let vue = new Vue({
+  el:"#vue",
+  data : {
+      arr :["首页","关于我们" ,"媒体介绍" ,"媒体优势" ,"网点布局" ,"新闻中心" ,"联系我们"],
+      selectIndex:6,
+      operateSum: 20,
+      openSlide:false,
+      isTrue:true,
+      wHeight: window.innerWidth,
+      routerAboutArr:['/describe','/about','/news'],
+      routerDescribeArr:['/describe','/describe','/adavance'],
+      routerArr:['/','/about','/describe','/adavance','/distribute','/news','/contact']
+  },
+  methods:{
+    select:function(index){
+      this.selectIndex = index;
+    },
+    clickOpenSlide:function(e){
+      this.openSlide = true;
+    },
+    clickCloseSlide:function(e){
+      this.openSlide = false;
+    }
+  }
+})
+</script>
+
+
+</body>
+</html>

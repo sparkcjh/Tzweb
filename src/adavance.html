@@ -1,0 +1,501 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>媒体优势-通众传媒</title>
+  <meta name="keywords" content="通众传媒,通众网,通众广告,电梯媒体,电梯公告栏,公告栏媒体,小区公告栏,社区公告栏,物业公告栏" />
+  <meta name="description" content="通众传媒是致力于开发电梯媒体和广告发布的专业社区电梯公告栏媒体公司，公告栏媒体是安装在社区高层住宅电梯等候厅电梯口的创新媒体，以传播效果好、广告关注率高的显著特点成为有特色、性价比高的电梯媒体。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=yes">
+</head>
+<body>
+
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/vue.js"></script>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  <script src="./assets/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="./assets/css/element.css">
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/element.js"></script>
+
+
+<link rel="stylesheet" href="./assets/css/main.css">
+<link rel="stylesheet" href="./assets/css/common.css">
+<link rel="stylesheet" href="./assets/css/describe.css">
+
+  <div class="container-fluid" id="vue">
+    <!-- logo及导航 -->
+    <div class="mynav padding-center-pc">
+      <div class="col-lg-2 logo-align"><a href="index.html"><img src="./assets/img/logo2.png" class="logo-img logo-img-pc" alt="通众传媒"/></a></div>
+      <div class="">
+        <ul class="nav-mine">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="describe.html">媒体介绍</a></li>
+          <li><a href="adavance.html" class="active">媒体优势</a></li>
+          <li><a href="distribute.html">资源布局</a></li>
+          <li><a href="news.html">新闻中心</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 微导航 -->
+    <div class="mynav-phone block-phone" style="position:relative;z-index:9;">
+      <div class="mynav-div-phone">
+        <a href="index.html"><img src="./assets/img/logo2.png" class="logo-img" alt="通众传媒" /></a>
+        <div class="nav-button"><img src="./assets/img/slide_button.png"/></div>
+      </div>
+    </div>
+    <div class="mynav-phone">
+      <!-- <div class="col-xs-1 col-sm-1 col-md-1"></div> -->
+      <div class="mynav-div-phone">
+        <a href="index.html"><img src="./assets/img/logo2.png" class="logo-img" alt="通众传媒" /></a>
+        <div class="nav-button" v-on:click="clickOpenSlide"><img src="./assets/img/slide_button.png"/></div>
+      </div>
+    </div>
+
+    <div class="mynav-slide-bg" v-if="openSlide" @click="clickCloseSlide"></div>
+    <div class="mynav-slide" v-if="openSlide">
+      <div class="mynav-slide-div">
+        <!-- <a href="index.html"><img class="mynav-slide-div-logo" src="./assets/img/logo2.png"/></a> -->
+        <div @click="clickCloseSlide" class="mynav-slide-div-close-div">
+          <img class="mynav-slide-div-close" src="./assets/img/close.png" />
+        </div>
+      </div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="index.html">首页</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="about.html">关于我们</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="describe.html">媒体介绍</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="adavance.html" class="active">媒体优势</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="distribute.html">资源布局</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="news.html">新闻中心</a></div>
+      <div class="mynav-slide-item"><a @click="clickCloseSlide" href="contact.html">联系我们</a></div>
+      <div class="mynav-slide-item-foot">
+        <div class="foot-address-phone" v-if="openSlide">
+            <img src="./assets/img/up.png" />
+            <div><a class="phone-number" href='tel:4000-055-066'>4000-055-066 电话咨询</a></div>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="block-re">
+        <!-- <el-carousel class="el-carous" width="100%" height="100%">
+          <el-carousel-item v-for="item in 4" :key="item"> -->
+            <div class="head-text">媒体优势</div>
+            <!-- <img class="head-img block-pc" src="./assets/img/adavance.jpg"/>
+            <img class="head-img block-phone" src="./assets/img/adavance_phone.jpg"/> -->
+
+            <div class="head-img block-pc" style="background:url(./assets/img/adavance.jpg) no-repeat center;background-size:cover;"></div>
+            <div class="head-img head-img-phone block-phone block-midphone" style="background: url(./assets/img/adavance_phone.jpg) no-repeat center;background-size:cover;"></div>
+            <img class="head-img head-img-phone block-phone block-minphone" src="./assets/img/adavance_phone.jpg" />
+          <!-- </el-carousel-item>
+        </el-carousel> -->
+      </div>
+
+
+      <!--图标说明-->
+      <div class="block-more padding-center-pc padding-top-bottom padding-ipad">
+        <div class="title-icon block-sign">
+            <div class="title">多场景覆盖</div>
+            <div class="padding-icon">
+                <!-- <div class="col-lg-2"></div> -->
+                <div class="icon-pc">
+                  <figure class="icon-block">
+                    <img class="icon-img" src="./assets/img/past0.png" alt="社区"/>
+                    <figcaption class="icon-text">社区</figcaption>
+                  </figure>
+                  <figure class="icon-block">
+                    <img class="icon-img" src="./assets/img/past1.png" alt="住宅"/>
+                    <figcaption class="icon-text">住宅</figcaption>
+                  </figure>
+                  <figure class="icon-block">
+                    <img class="icon-img" src="./assets/img/past2.png" alt="写字楼"/>
+                    <figcaption class="icon-text">写字楼</figcaption>
+                  </figure>
+                  <figure class="icon-block">
+                    <img class="icon-img" src="./assets/img/past3.png" alt="公寓"/>
+                    <figcaption class="icon-text">公寓</figcaption>
+                  </figure>
+                  <figure class="icon-block icon-block-more">
+                    <img class="icon-img" src="./assets/img/past4.png" alt="更多"/>
+                    <figcaption class="icon-text">更多</figcaption>
+                  </figure>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+    <!--图文合子-->
+    <div class="block-title-icon padding-center-pc padding-top-bottom padding-ipad">
+      <!-- <div class="col-lg-2"></div> -->
+      <div class="">
+        <div class="title">媒体优势</div>
+        <div class="block-title-icon-block block-title-icon-block">
+          <figure class="img-block title-icon-content title-icon-content-adavance">
+            <div class="block-white-img"><img class="white-img" src="./assets/img/adavance1.png" alt="位置优越"/></div>
+            <figcaption class="icon-text">位置优越</figcaption>
+            <div class="text-content">安装在高层楼宇电梯等候厅的电梯中间和旁边,广告位置极为醒目</div>
+          </figure>
+          <figure class="img-block title-icon-content title-icon-content-adavance">
+            <div class="block-white-img"><img class="white-img" src="./assets/img/adavance2.png" alt="主动观看"/></div>
+            <figcaption class="icon-text">主动观看</figcaption>
+            <div class="text-content">张贴物业管理处的通知,与住户的生活息息相 关,住户对公告栏长期的关注</div>
+          </figure>
+          <figure class="img-block title-icon-content title-icon-content-adavance">
+            <div class="block-white-img"><img class="white-img" src="./assets/img/adavance3.png" alt="受众精准"/></div>
+            <figcaption class="icon-text">受众精准</figcaption>
+            <div class="text-content">根据住户类型精确投放广告,计算出准确的受 众,为经营决策提供了重要的数据</div>
+          </figure>
+          </div>
+          <div class="block-title-icon-block">
+          <figure class="img-block title-icon-content title-icon-content-adavance">
+            <div class="block-white-img"><img class="white-img" src="./assets/img/adavance4.png" alt="高端人群"/></div>
+            <figcaption class="icon-text">高端人群</figcaption>
+            <div class="text-content">住户都是高学历、高收入、高消费人群，消 费欲望强，对业务推广非常有效</div>
+          </figure>
+          <figure class="img-block title-icon-content title-icon-content-adavance">
+            <div class="block-white-img"><img class="white-img" src="./assets/img/adavance5.png" alt="性价比高"/></div>
+            <figcaption class="icon-text">性价比高</figcaption>
+            <div class="text-content">性价比高!商家投入相同的广告费用可以覆盖 更多的目标人群,达到更好的效果</div>
+          </figure>
+          <figure class="img-block title-icon-content title-icon-content-adavance">
+            <div class="block-white-img"><img class="white-img" src="./assets/img/adavance6.png" alt="到达率高"/></div>
+            <figcaption class="icon-text">到达率高</figcaption>
+            <div class="text-content">住户每天多次乘坐电梯,就有多次机会阅读广 告内容，形成了强烈的广告效应</div>
+          </figure>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- 手机版图文盒子-->
+    <div class="block-title-icon-phone">
+      <!-- <div class="col-lg-2"></div> -->
+      <div class="col-lg-12">
+        <div class="title">媒体优势</div>
+
+        <div class="block-title-phone">
+          <div class="title-icon-content">
+            <img class="white-img" src="./assets/img/adavance1.png" />
+            <div class="icon-text">位置优越</div>
+            <div class="text-content">安装在高层楼宇电梯等候厅的电梯中间和旁边,广告位置极为醒目</div>
+          </div>
+          <div class="title-icon-content">
+            <img class="white-img" src="./assets/img/adavance2.png" />
+            <div class="icon-text">主动观看</div>
+            <div class="text-content">张贴物业管理处的通知,与住户的生活息息相 关,住户对公告栏长期的关注</div>
+          </div>
+          <div class="title-icon-content">
+            <img class="white-img" src="./assets/img/adavance3.png" />
+            <div class="icon-text">受众精准</div>
+            <div class="text-content">根据住户类型精确投放广告,计算出准确的受 众,为经营决策提供了重要的数据</div>
+          </div>
+          <div class="title-icon-content">
+            <img class="white-img" src="./assets/img/adavance4.png" />
+            <div class="icon-text">高端人群</div>
+            <div class="text-content">住户都是高学历、高收入、高消费人群，消 费欲望强，对业务推广非常有效</div>
+          </div>
+          <div class="title-icon-content">
+            <img class="white-img" src="./assets/img/adavance5.png" />
+            <div class="icon-text">性价比高</div>
+            <div class="text-content">性价比高!商家投入相同的广告费用可以覆盖 更多的目标人群,达到更好的效果</div>
+          </div>
+          <div class="title-icon-content">
+            <img class="white-img" src="./assets/img/adavance6.png" />
+            <div class="icon-text">到达率高</div>
+            <div class="text-content">住户每天多次乘坐电梯,就有多次机会阅读广 告内容，形成了强烈的广告效应</div>
+          </div>
+         </div>
+
+      </div>
+    </div>
+
+
+    <!-- :style="{width:operateWidth+ 'px'}" -->
+    <div class="operate-block padding-center-pc padding-top-bottom padding-ipad text-align-center">
+      <div class="padding-block block-phone-el">
+          <div class="title" style="color:#2c3e50;">媒体实景图</div>
+          <figure class="img-block img-block-phone-b">
+            <img class="big-img" src="./assets/img/exmaple0.jpg" style="width:100%;background-size:cover;"/>
+            <figcaption class="icon-text">汽车业</figcaption>
+          </figure>
+          <figure class="img-block img-block-phone-b">
+            <img class="big-img" src="./assets/img/exmaple1.jpg" style="width:100%;background-size:cover;"/>
+            <figcaption class="icon-text">通讯业</figcaption>
+          </figure>
+          <figure class="img-block img-block-phone-b">
+            <img class="big-img" src="./assets/img/exmaple2.jpg" style="width:100%;background-size:cover;"/>
+            <figcaption class="icon-text">互联网</figcaption>
+          </figure>
+
+          <div class="to-button block-phone">
+            <img src="./assets/img/to.png" v-if="!button" @click="tapButton"/>
+          </div>
+          <figure class="img-block img-block-phone-b" v-if="button">
+            <img class="big-img" src="./assets/img/exmaple3.jpg" style="width:100%;background-size:cover;"/>
+            <figcaption class="icon-text">地产业</figcaption>
+          </figure>
+          <figure class="img-block img-block-phone-b" v-if="button">
+            <img class="big-img" src="./assets/img/exmaple4.jpg" style="width:100%;background-size:cover;"/>
+            <figcaption class="icon-text">教育业</figcaption>
+          </figure>
+          <figure class="img-block img-block-phone-b" v-if="button">
+            <img class="big-img" src="./assets/img/exmaple5.jpg" style="width:100%;background-size:cover;"/>
+            <figcaption class="icon-text">旅游业</figcaption>
+          </figure>
+          <figure class="img-block img-block-phone-b" v-if="button">
+            <img class="big-img" src="./assets/img/exmaple6.jpg" style="width:100%;background-size:cover;"/>
+            <figcaption class="icon-text">零售业</figcaption>
+          </figure>
+          <figure class="img-block img-block-phone-b" v-if="button">
+            <img class="big-img" src="./assets/img/exmaple7.jpg" style="width:100%;background-size:cover;"/>
+            <figcaption class="icon-text">通讯业</figcaption>
+          </figure>
+          <figure class="img-block img-block-phone-b" v-if="button">
+            <img class="big-img" src="./assets/img/exmaple8.jpg" style="width:100%;background-size:cover;"/>
+            <figcaption class="icon-text">互联网</figcaption>
+          </figure>
+
+          <div class="to-button block-phone">
+            <img src="./assets/img/for.png" v-if="button" @click="tapButton"/>
+          </div>
+
+          <el-carousel class="el-carous-img  el-carous-block img-block-phone-pc el-carousel text-align-center" width="100%" height="100%" arrow="never">
+            <el-carousel-item>
+              <figure class="img-block">
+                <img class="big-img" src="./assets/img/exmaple0.jpg" style="width:100%;background-size:cover;"/>
+                <figcaption class="icon-text">汽车业</figcaption>
+              </figure>
+              <figure class="img-block img-block-center">
+                <img class="big-img" src="./assets/img/exmaple1.jpg" style="width:100%;background-size:cover;"/>
+                <figcaption class="icon-text">通讯业</figcaption>
+              </figure>
+              <figure class="img-block">
+                <img class="big-img" src="./assets/img/exmaple2.jpg" style="width:100%;background-size:cover;"/>
+                <figcaption class="icon-text">互联网</figcaption>
+              </figure>
+            </el-carousel-item>
+
+            <el-carousel-item>
+              <figure class="img-block">
+                <img class="big-img" src="./assets/img/exmaple3.jpg" style="width:100%;background-size:cover;"/>
+                <figcaption class="icon-text">地产业</figcaption>
+              </figure>
+              <figure class="img-block img-block-center">
+                <img class="big-img" src="./assets/img/exmaple4.jpg" style="width:100%;background-size:cover;"/>
+                <figcaption class="icon-text">教育业</figcaption>
+              </figure>
+              <figure class="img-block">
+                <img class="big-img" src="./assets/img/exmaple5.jpg" style="width:100%;background-size:cover;"/>
+                <figcaption class="icon-text">旅游业</figcaption>
+              </figure>
+            </el-carousel-item>
+            <el-carousel-item>
+              <figure class="img-block">
+                <img class="big-img" src="./assets/img/exmaple6.jpg" style="width:100%;background-size:cover;"/>
+                <figcaption class="icon-text">零售业</figcaption>
+              </figure>
+              <figure class="img-block img-block-center">
+                <img class="big-img" src="./assets/img/exmaple7.jpg" style="width:100%;background-size:cover;"/>
+                <figcaption class="icon-text">美容业</figcaption>
+              </figure>
+              <figure class="img-block">
+                <img class="big-img" src="./assets/img/exmaple8.jpg" style="width:100%;background-size:cover;"/>
+                <figcaption class="icon-text">金融业</figcaption>
+              </figure>
+            </el-carousel-item>
+          </el-carousel>
+      </div>
+    </div>
+
+    <!--尾部  -->
+    <div class="foot foot-phone padding-center-pc" style="padding-top:30px;">
+      <div class="">
+        <div class="foot-text foot-text-phone">
+          <div class="">
+            <div class="foot-title foot-title-phone">关于我们</div>
+            <ul class="foot-ul foot-ul-phone">
+              <li><a href="about.html">公司简介</a></li>
+              <li><a href="about.html">发展历程</a></li>
+              <li><a href="news.html">新闻中心</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <div class="foot-title foot-title-phone">媒体介绍</div>
+            <ul class="foot-ul foot-ul-phone">
+              <li><a href="describe.html">媒体形式</a></li>
+              <li><a href="adavance.html">媒体优势</a></li>
+              <li><a href="describe.html">服务流程</a></li>
+            </ul>
+          </div>
+          <div class="">
+              <div class="foot-title foot-title-phone">联系方式</div>
+              <ul class="foot-ul foot-ul-phone no-flex">
+                <li>服务热线： 4000-055-066（周一至周日 09:00-22:00）</li>
+                <!-- <li>商务合作： 138-8888-8888 </li> -->
+                <li>总部地址： 深圳市福田区沙头街道天安社区泰然七路泰然科技园苍松大厦508 </li>
+              </ul>
+          </div>
+          <div class="">
+            <div class="foot-title foot-title-phone-cooperate">关注公众号</div>
+            <img class="foot-img" src="./assets/img/website.png"/>
+          </div>
+        </div>
+      </div>
+      <!-- 版权 -->
+      <div class="foot-vision foot-vision-phone">
+        <div class="foot-vision-div">(C) 2012-2020 通众传媒 版权所有</div>
+        <div  class="foot-vision-div"><a href="http://www.beian.miit.gov.cn/">ICP备案号： 粤ICP备13027485号</a></div>
+      </div>
+      <div class="foot-address-phone icon-item no-fixed" style="position:relative;">
+          <img src="./assets/img/up.png"/>
+          <div>4000-055-066 电话咨询</div>
+      </div>
+      <div class="foot-address-phone icon-item no-fixed">
+          <img src="./assets/img/up.png"/>
+          <div><a class="phone-number" href='tel:4000-055-066'>4000-055-066 电话咨询</a></div>
+      </div>
+    </div>
+    <!-- end 尾部 -->
+
+  </div>
+
+
+  <script>
+
+
+
+  var vue = new Vue({
+    el:"#vue",
+    data:{
+        selectIndex:3,
+        operateSum: 20,
+        openSlide:false,
+        isTrue:true,
+        button:false,
+        wHeight: window.innerWidth,
+        routerAboutArr:['/describe','/about','/news'],
+        routerDescribeArr:['/describe','/describe','/adavance'],
+        routerArr:['/','/about','/describe','/adavance','/distribute','/news','/contact']
+    },
+    methods:{
+      select:function(index){
+        this.selectIndex = index;
+      },
+      clickOpenSlide:function(e){
+        this.openSlide = true;
+      },
+      clickCloseSlide:function(e){
+        this.openSlide = false;
+      },
+      tapButton:function(e){
+          this.button = !this.button;
+      }
+    }
+  })
+  </script>
+
+  <style>
+  .block-title-icon-block{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .block-title-icon-block{
+    margin:20px 0;
+  }
+  .block-title-icon-block .text-content{
+    min-height: 90px;
+    color: black;
+  }
+
+  .block-title-icon-phone  .title-icon-content{
+    width: 47%;
+    display: inline-block;
+    margin:1% 1%;
+  }
+  .block-title-phone{
+    display: flex;
+    background-color:transparent;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .title-icon-content .icon-text{
+    text-align: center;
+    padding:10px 0;
+    font-size: 16px;
+    color:  black ;
+  }
+  .icon-text{
+    text-align: center;
+  }
+  .el-carous-img{
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    text-align: left;
+  }
+
+  .el-carousel__indicator .el-carousel__button{
+    background-color:  #000000;
+    height: 6px;
+    border-radius: 6px;
+    opacity: 1;
+  }
+  .is-active .el-carousel__button{
+    background-color: #B40006;
+    height: 6px;
+    border-radius: 6px;
+      opacity:1;
+  }
+
+    .el-carous-img .el-carousel__item:nth-child(2n) {
+       background-color: white;
+    }
+
+     .el-carous-img .el-carousel__item:nth-child(2n+1) {
+       background-color: white;
+    }
+    .operate-block{
+      background-color: white;
+      font-size: 14px;
+      color: #999;
+    }
+    .el-carous-block{
+      width: 100%;
+      height: 300px;
+      background-color: white;
+      text-align: left;
+    }
+    .el-carous-block .el-carousel__item:nth-child(2n) {
+       background-color: white;
+    }
+
+    .el-carous-block .el-carousel__item:nth-child(2n+1) {
+       background-color: white;
+    }
+    .img-block-phone-b .img-block{
+      box-shadow: 0px 1px 3px #ccc;
+      margin-bottom: 20px;
+    }
+    .title-icon-content{
+      text-align: center;
+    }
+    .text-content{
+      text-align: left;
+      height: 80px;
+    }
+    .img-block > img{
+      height: 210px;
+    }
+    .foot-address-phone {
+      position: fixed;
+      z-index:9;
+    }
+  </style>
+  <link rel="stylesheet" href="./assets/css/ipad.css">
+</body>
+</html>

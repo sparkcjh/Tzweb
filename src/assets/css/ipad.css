@@ -1,0 +1,340 @@
+/* 注意：1020px之前。都用横条显示 */
+/*且960-1100px之间发展历程不够 */
+/* 修改后的导航条 */
+.mynav-slide-div{
+  position: fixed;
+  top:0;
+  right: 0;
+  width: 30%;
+  padding:0 20px;
+}
+.text-align-center{
+  text-align: center;
+}
+
+/* 根据排版设置图片高度 */
+@media screen and (min-width:550px) and (max-width: 650px){
+  .company-img {
+    height:  324px;
+  }
+  .contact-img-phone{
+      height:  432px;
+  }
+  .img-block > img{
+    height: 330px;
+  }
+  .operate-img img{
+    width:75%;
+    height: 75%;
+  }
+}
+@media screen and (min-width:650px) and (max-width: 750px){
+  .company-img {
+    height:  378px;
+  }
+  .contact-img-phone{
+      height:  490px;
+  }
+  .operate-block, .operate-block-phone{
+    text-align: center;
+  }
+  .img-block > img{
+    height: 422px;
+  }
+  .operate-img img{
+    width:75%;
+    height: 78%;
+  }
+}
+@media screen and (min-width:750px) and (max-width: 960px){
+  .company-img{
+    height:  486px;
+  }
+  .el-carous,.head-img{
+      height: 330px;
+  }
+  .contact-img-phone{
+      height:  630px;
+  }
+  .operate-block, .operate-block-phone{
+    text-align: center;
+  }
+
+  .img-block > img{
+    height: 488px;
+  }
+  .operate-img img{
+    /* width:75%; */
+    height: 95%;
+  }
+}
+@media screen and (min-width:750px) and (max-width: 850px){
+  .img-block > img{
+    height: 425px;
+  }
+  .company-img{
+    height:  432px;
+  }
+  .operate-img img{
+    width:75%;
+    height: 85%;
+  }
+  .contact-img-phone{
+      height:  560px;
+  }
+}
+@media screen and (min-width:960px) and (max-width: 1040px){
+  .contact-img-pc{
+    height: 168px;
+  }
+  .operate-block, .operate-block-phone{
+    text-align: center;
+  }
+  .img-block{
+    width:  240px;
+  }
+  .img-block > img{
+    height: 158px;
+  }
+  .operate-img img{
+    width:75%;
+    height: 75%;
+  }
+  .padding-top-bottom{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .new-item-block{
+    /* width: 230px; */
+
+  }
+  .new-item-block > .big-img{
+    height: 180px;
+  }
+}
+@media screen and (min-width:1040px) and (max-width: 1200px){
+
+  .contact-img-pc{
+    height: 182px;
+  }
+  .operate-block, .operate-block-phone{
+    text-align: center;
+  }
+  .img-block{
+    width:  260px;
+  }
+  .img-block > img{
+    height: 171px;
+  }
+  .padding-top-bottom{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .new-item-block > .big-img{
+    height: 210px;
+  }
+}
+@media screen and (max-width:480px){
+  .block-midphone{
+    display: none;
+  }
+  .block-minphone{
+    display: block;
+  }
+}
+@media screen and (min-width:480px) and (max-width: 960px){
+  .block-midphone{
+    display: block;
+  }
+  .block-minphone{
+    display: none;
+  }
+}
+
+@media screen and (max-width:960px){
+  .foot-text-phone{
+    display: block;
+  }
+}
+@media screen and (min-width:960px) and (max-width: 1020px){
+  .mynav{
+    display: none;
+  }
+  .mynav-phone{
+    display: block;
+  }
+}
+@media screen and (min-width:960px) and (max-width: 1360px){
+  .padding-center-pc{
+    padding:0 30px;
+  }
+  /*  */
+  .step-item > div{
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+  }
+  /* 小圆点 */
+  .step-bar .step-item span{
+    position: absolute;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border:1px solid  #B40006;
+    border-radius: 5px;
+    top:10px;
+    right: 249px;
+  }
+  .step-bar .step-item .span-left{
+    left: 251px;
+  }
+  .padding-top-bottom{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+/* 根据屏幕设置行缩 */
+@media screen and (min-width:1360px) and (max-width: 1900px){
+  .padding-center-pc{
+    padding:0 100px;
+  }
+  .padding-top-bottom{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  /* .img-block > img{
+    height: 200px;
+  } */
+}
+@media screen and (min-width:1200px) and (max-width: 1340px){
+  .img-block{
+    width:  270px;
+  }
+  .img-block > img{
+    height: 178px;
+  }
+  .contact-img-pc{
+    height: 189px;
+  }
+  .new-item-block > .big-img{
+    height: 202px;
+  }
+}
+@media screen and (min-width:1200px) and (max-width: 1300px){
+  .new-item-block > .big-img{
+    height: 232px;
+  }
+}
+@media screen and (min-width:1300px) and (max-width: 1400px){
+  .padding-center-pc{
+    padding:0 150px;
+  }
+  .padding-ipad,.padding-ipad-news,.padding-ipad-contact{
+    padding:0 140px;
+  }
+  .img-block{
+    width:  270px;
+  }
+  .img-block > img{
+    height: 178px;
+  }
+  .padding-top-bottom{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .contact-img-pc{
+    height: 189px;
+  }
+  .new-item-block > .big-img{
+    height: 204px;
+  }
+}
+@media screen and (min-width:1400px) and (max-width: 1600px){
+  .padding-center-pc{
+    padding:0 220px;
+  }
+  .padding-ipad,.padding-ipad-news,.padding-ipad-contact{
+    padding:0 190px;
+  }
+  .padding-top-bottom{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .img-block{
+    width:  275px;
+  }
+  .img-block > img{
+    height: 181px;
+  }
+  .contact-img-pc{
+    height: 193px;
+  }
+  .new-item-block > .big-img{
+    height: 217px;
+  }
+}
+@media screen and (min-width:1600px) and (max-width: 1700px){
+  .padding-center-pc{
+    padding:0 280px;
+  }
+  .padding-top-bottom{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .img-block{
+    width:  280px;
+  }
+  .img-block > img{
+    height: 184px;
+  }
+  .contact-img-pc{
+    height: 200px;
+  }
+  .new-item-block > .big-img{
+    height: 210px;
+  }
+}
+@media screen and (min-width:1700px) and (max-width: 1900px){
+  .padding-center-pc{
+    padding:0 360px;
+  }
+  .padding-ipad,.padding-ipad-news,.padding-ipad-contact{
+    padding:0 300px;
+  }
+  .padding-top-bottom{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .img-block{
+    width:  290px;
+  }
+  .img-block > img{
+    height: 191px;
+  }
+  .new-item-block > .big-img{
+    height: 235px;
+  }
+}
+@media screen and (min-width:1800px) and (max-width: 1900px){
+  .img-block{
+    width:  320px;
+  }
+  .img-block > img{
+    height: 211px;
+  }
+  .new-item-block > .big-img{
+    height: 250px;
+  }
+}
+@media screen and (min-width:1900px) {
+  .img-block{
+    width:  320px;
+  }
+  .img-block > img{
+    height: 211px;
+  }
+  .new-item-block > .big-img{
+    height: 235px;
+  }
+}

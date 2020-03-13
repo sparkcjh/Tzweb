@@ -1,0 +1,615 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>通众传媒-专业电梯公告栏媒体</title>
+  <meta name="keywords" content="通众传媒,通众网,通众广告,电梯广告,电梯媒体,电梯公告栏,小区公告栏,社区公告栏,物业公告栏" />
+  <meta name="description" content="通众传媒是致力于开发电梯媒体和广告发布的专业社区电梯公告栏媒体公司，公告栏媒体是安装在社区高层住宅电梯等候厅电梯口的创新媒体，以传播效果好、广告关注率高的显著特点成为有特色、性价比高的电梯媒体。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=yes">
+</head>
+<body>
+
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/vue.js"></script>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  <script src="./assets/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="./assets/css/element.css">
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/element.js"></script>
+
+<link rel="stylesheet" href="./assets/css/main.css">
+<link rel="stylesheet" href="./assets/css/common.css">
+
+
+<style>
+.el-carous-img{
+  margin:0;
+  padding:0;
+  width: 100%;
+  height: 250px;
+  background-color: white;
+  text-align: left;
+}
+
+.el-carousel__indicator .el-carousel__button{
+  background-color:  #000000;
+  height: 6px;
+  border-radius: 6px;
+  opacity: 1;
+}
+.is-active .el-carousel__button{
+  background-color: #B40006;
+  height: 6px;
+  border-radius: 6px;
+    opacity:1;
+}
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 150px;
+    margin: 0;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+     background-color: #99a9bf;
+  }
+
+  .el-carousel__item:nth-child(2n+1) {
+     background-color: #d3dce6;
+  }
+  .el-carous-img .el-carousel__item:nth-child(2n) {
+     background-color: white;
+  }
+
+   .el-carous-img .el-carousel__item:nth-child(2n+1) {
+     background-color: white;
+  }
+
+  .no-fixed{
+    width: 100%;
+    position: relative;
+  }
+  .no-flex{
+    display: block;
+  }
+  .no-flex li{
+    width: 100%;
+  }
+  .img-block > .big-img{
+    display: block;
+    vertical-align: top;
+  }
+  .img-block{
+    background-color: white;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+  .icon-text{
+    color: #999;
+    padding:5px;
+    text-align: center;
+  }
+  .img-block .icon-text{
+    text-align: center;
+    padding:10px  0;
+  }
+  .foot-img{
+    width: 90px;
+    height: 90px;
+  }
+  .el-carous-block{
+    width: 100%;
+    height: 300px;
+    background-color: #F7F7FA;
+    text-align: left;
+  }
+  .el-carous-block .el-carousel__item:nth-child(2n) {
+     background-color: #F7F7FA;
+  }
+
+  .el-carous-block .el-carousel__item:nth-child(2n+1) {
+     background-color: #F7F7FA;
+  }
+  .block-company-describe{
+    text-align: center;
+  }
+  .img-block > img{
+    height: 210px;
+  }
+  .el-img{
+    height: 350px;
+  }
+  .foot-address-phone {
+    position: fixed;
+    z-index:9;
+  }
+  /* 合作伙伴下的轮播图 */
+@media screen and (max-width: 480px){
+ .operate-block-phone  .el-carousel__indicator .el-carousel__button{
+    background-color:  transparent;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    border:1px solid #707070;
+    opacity: 1;
+  }
+ .operate-block-phone  .is-active .el-carousel__button{
+    background-color: #B40006;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    border:0;
+    opacity:1;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="./assets/css/ipad.css">
+<div id="vue" class="container-fluid">
+    <!-- logo及导航 -->
+    <div class="mynav padding-center-pc block-pc">
+      <div class="col-lg-2 logo-align"><a href="index.html"><img src="./assets/img/logo2.png" class="logo-img logo-img-pc"/></a></div>
+      <div class="">
+        <ul class="nav-mine">
+          <li><a href="index.html" class="active">首页</a></li>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="describe.html">媒体介绍</a></li>
+          <li><a href="adavance.html">媒体优势</a></li>
+          <li><a href="distribute.html">资源布局</a></li>
+          <li><a href="news.html">新闻中心</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 微导航 -->
+    <div class="mynav-phone block-phone" style="position:relative;z-index:9;">
+      <div class="mynav-div-phone">
+        <a href="index.html"><img src="./assets/img/logo2.png" class="logo-img" /></a>
+        <div class="nav-button"><img src="./assets/img/slide_button.png"/></div>
+      </div>
+    </div>
+    <div class="mynav-phone block-phone">
+      <div class="mynav-div-phone">
+        <a href="index.html"><img src="./assets/img/logo2.png" class="logo-img" /></a>
+        <div class="nav-button" v-on:click="clickOpenSlide" ><img  src="./assets/img/slide_button.png"/></div>
+      </div>
+    </div>
+
+
+    <div class="mynav-slide-bg" v-if="openSlide" @click="clickCloseSlide"></div>
+    <div class="mynav-slide" v-if="openSlide">
+      <div class="mynav-slide-div">
+        <!-- <a href="index.html"><img class="mynav-slide-div-logo" src="./assets/img/logo2.png"/></a> -->
+        <div @click="clickCloseSlide" class="mynav-slide-div-close-div">
+          <img class="mynav-slide-div-close" src="./assets/img/close.png" />
+        </div>
+      </div>
+        <div class="mynav-slide-item"><a @click="clickCloseSlide" href="index.html" class="active">首页</a></div>
+        <div class="mynav-slide-item"><a @click="clickCloseSlide" href="about.html">关于我们</a></div>
+        <div class="mynav-slide-item"><a @click="clickCloseSlide" href="describe.html">媒体介绍</a></div>
+        <div class="mynav-slide-item"><a @click="clickCloseSlide" href="adavance.html">媒体优势</a></div>
+        <div class="mynav-slide-item"><a @click="clickCloseSlide" href="distribute.html">资源布局</a></div>
+        <div class="mynav-slide-item"><a @click="clickCloseSlide" href="news.html">新闻中心</a></div>
+        <div class="mynav-slide-item"><a @click="clickCloseSlide" href="contact.html">联系我们</a></div>
+
+      <div class="mynav-slide-item-foot">
+        <div class="foot-address-phone" v-if="openSlide">
+            <img src="./assets/img/up.png" />
+            <div><a class="phone-number" href='tel:4000-055-066'>4000-055-066 电话咨询</a></div>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="">
+        <el-carousel class="el-carous" width="100%" height="100%" arrow="never">
+          <el-carousel-item>
+            <!-- <img class="head-img block-pc" src="./assets/img/nav1.png" /> -->
+            <!-- <img class="head-img head-img-phone block-phone" src="./assets/img/index_phone0.png" /> -->
+
+            <div class="head-img block-pc" style="background:url(./assets/img/nav1.jpg) no-repeat center;background-size:cover;"></div>
+            <div class="head-img head-img-phone block-phone block-midphone" style="background: url(./assets/img/index_phone0.jpg) no-repeat center;background-size:cover;"></div>
+            <img class="head-img head-img-phone block-phone block-minphone" src="./assets/img/index_phone0.jpg" />
+          </el-carousel-item>
+          <el-carousel-item>
+            <!-- <img class="head-img block-pc" src="./assets/img/nav0.png" /> -->
+            <!-- <img class="head-img head-img-phone block-phone" src="./assets/img/index_phone1.png" /> -->
+            <div class="head-img block-pc" style="background:url(./assets/img/nav0.jpg) no-repeat center;background-size:cover;"></div>
+            <div class="head-img head-img-phone block-phone block-midphone" style="background: url(./assets/img/index_phone1.jpg) no-repeat center;background-size:cover;"></div>
+            <img class="head-img head-img-phone block-phone block-minphone" src="./assets/img/index_phone1.jpg" />
+          </el-carousel-item>
+          <el-carousel-item>
+            <!-- <img class="head-img block-pc" src="./assets/img/nav2.png" /> -->
+            <!-- <img class="head-img head-img-phone block-phone" src="./assets/img/index_phone2.png" /> -->
+            <div class="head-img block-pc" style="background:url(./assets/img/nav2.jpg) no-repeat center;background-size:cover;"></div>
+            <div class="head-img head-img-phone block-phone block-midphone" style="background: url(./assets/img/index_phone2.jpg) no-repeat center;background-size:cover;"></div>
+            <img class="head-img head-img-phone block-phone block-minphone" src="./assets/img/index_phone2.jpg" />
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+    <!-- </div> -->
+    <!--图文 1 -->
+      <div class="block-company-describe block-company-source-pc padding-center-pc padding-top-bottom padding-ipad">
+          <div class="title">公司简介</div>
+            <div class="title-company">
+                <div style="width:auto;"><img class="company-img" src="./assets/img/index_describe.jpg" style="background-size:cover;" alt="公司简介"/></div>
+                <div class="company-content">
+                    <div class="company-title">通众传媒是一家全国性的专业电梯媒体广告公司，致力于全国中高端的社区媒体开发和社区广告发布。</div>
+                    <div class="company-subtitle">电梯公告栏媒体是公司独家开发且拥有国家专利的媒体形式，已全面覆盖了北京、上海、广州、深圳、南京、杭州、天津、成都、武汉、苏州、合肥等二十几个重点城市、近十万栋高层社区楼宇，每天影响近亿商务白领人群。</div>
+                    <div class="button-block"><a href="about.html"><div class="button-more">查看更多</div></a></div>
+                </div>
+            </div>
+      </div>
+
+    <!--图文  2-->
+      <div class="block-company-source block-company-source-pc padding-center-pc padding-top-bottom padding-ipad">
+          <div class="title">媒体资源</div>
+          <div class="title-company">
+              <div class="company-content">
+                  <div class="company-title"></div>
+                  <div class="company-subtitle">电梯公告栏媒体是一种全新的、富有创意的新型媒体，广告媒体采用公告栏与广告结合的形式，一部分是管理处发布通知的地方，另一部分为广告投放位置，非常抢眼醒目。</div>
+                  <div class="button-block"><a href="describe.html"><div class="button-more">查看更多</div></a></div>
+              </div>
+              <div class=""><img class="company-img" src="./assets/img/index_nav.jpg"  style="background-size:cover;" alt="媒体资源"/></div>
+          </div>
+      </div>
+
+      <div class="block-company-describe block-company-source-phone">
+          <div class="title">公司简介</div>
+          <div class="title-company">
+              <div class="col-lg-4"><img class="company-img" src="./assets/img/index_describe.jpg"  style="background-size:cover;" alt="公司简介"/></div>
+              <div class="col-lg-4 company-content">
+                  <div class="company-title">通众传媒是一家全国性的专业电梯媒体广告公司，致力于全国中高端的社区媒体开发和社区广告发布。</div>
+                  <div class="company-subtitle">电梯公告栏媒体是公司独家开发且拥有国家专利的媒体形式，已全面覆盖了北京、上海、广州、深圳、南京、杭州、天津、成都、武汉、苏州、合肥等二十几个重点城市、近十万栋高层社区楼宇，每天影响近亿商务白领人群。</div>
+                  <div class="button-block"><a href="about.html"><div class="button-more">查看更多</div></a></div>
+              </div>
+          </div>
+      </div>
+      <div class="block-company-source block-company-source-phone">
+          <div class="title">媒体资源</div>
+          <div class="title-company">
+              <div class="col-lg-4"><img class="company-img" src="./assets/img/index_nav.jpg"  style="background-size:cover;" alt="媒体资源"/></div>
+              <div class="col-lg-4 company-content">
+                  <div class="company-title">通众传媒是一家全国性的专业电梯媒体广告公司，致力于全国中高端的社 区媒体开发和社区广告发布。</div>
+                  <div class="company-subtitle">电梯公告栏媒体是公司独家开发且拥有国家专利的媒体形式，已全面覆盖 了北京、上海、广州、深圳、南京、杭州、天津、成都、武汉、
+                    苏州、合 肥等二十几个重点城市、近十万栋高层社区楼宇，每天影响近亿商务白领人群。</div>
+                  <div class="button-block"><a href="describe.html"><div class="button-more">查看更多</div></a></div>
+              </div>
+          </div>
+      </div>
+    <!-- </div> -->
+
+    <!--图标说明-->
+    <div class="block-more padding-center-pc padding-top-bottom padding-ipad">
+      <div class="title-icon block-sign">
+          <div class="title">多场景覆盖</div>
+          <div class="padding-icon">
+              <!-- <div class="col-lg-2"></div> -->
+              <div class="icon-pc">
+                <figure class="icon-block">
+                  <img class="icon-img" src="./assets/img/past0.png"/>
+                  <figcaption class="icon-text">社区</figcaption>
+                </figure>
+                <figure class="icon-block">
+                  <img class="icon-img" src="./assets/img/past1.png"/>
+                  <figcaption class="icon-text">住宅</figcaption>
+                </figure>
+                <figure class="icon-block">
+                  <img class="icon-img" src="./assets/img/past2.png"/>
+                  <figcaption class="icon-text">写字楼</figcaption>
+                </figure>
+                <figure class="icon-block">
+                  <img class="icon-img" src="./assets/img/past3.png"/>
+                  <figcaption class="icon-text">公寓</figcaption>
+                </figure>
+                <figure class="icon-block icon-block-more">
+                  <img class="icon-img" src="./assets/img/past4.png"/>
+                  <figcaption class="icon-text">更多</figcaption>
+                </figure>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!--图文合子-->
+    <div class="title-icon block-exmaple padding-icon padding-center-pc padding-top-bottom padding-ipad">
+          <div class="title" style="padding-bottom:10px;">媒体案例</div>
+          <div class="">
+              <!-- <div class="col-lg-2"></div> -->
+              <div class=" padding-block" style="text-align:center;">
+
+                <figure class="img-block img-block-phone-b">
+                  <img class="big-img" src="./assets/img/exmaple0.jpg" style="width:100%;background-size:cover;" alt="汽车业"/>
+                  <!-- <img class="big-img" style="width:100%;background: url(./assets/img/exmaple0.jpg) no-repeat center;background-size:cover;" /> -->
+                  <figcaption class="icon-text">汽车业</figcaption>
+                </figure>
+                <figure class="img-block img-block-phone-b">
+                  <img class="big-img" src="./assets/img/exmaple1.jpg" style="width:100%;background-size:cover;" alt="通讯业"/>
+                  <!-- <img class="big-img" style="width:100%;background: url(./assets/img/exmaple1.jpg) no-repeat center;background-size:cover;" /> -->
+                  <figcaption class="icon-text">通讯业</figcaption>
+                </figure>
+                <figure class="img-block img-block-phone-b">
+                  <img class="big-img" src="./assets/img/exmaple2.jpg" style="width:100%;background-size:cover;" alt="互联网"/>
+                  <!-- <img class="big-img" style="width:100%;background: url(./assets/img/exmaple2.jpg) no-repeat center;background-size:cover;" /> -->
+                  <figcaption class="icon-text">互联网</figcaption>
+                </figure>
+
+                <div class="to-button block-phone">
+                  <img src="./assets/img/to.png" v-if="!button" @click="tapButton" alt="more"/>
+                </div>
+
+                <figure class="img-block img-block-phone-b" v-if="button">
+                  <img class="big-img" src="./assets/img/exmaple3.jpg" style="width:100%;background-size:cover;"  alt="地产业"/>
+                  <!-- <img class="big-img" style="width:100%;background: url(./assets/img/exmaple3.jpg) no-repeat center;background-size:cover;" /> -->
+                  <figcaption class="icon-text">地产业</figcaption>
+                </figure>
+                <figure class="img-block img-block-phone-b" v-if="button">
+                  <img class="big-img" src="./assets/img/exmaple4.jpg" style="width:100%;background-size:cover;"  alt="教育业"/>
+                  <!-- <img class="big-img" style="width:100%;background: url(./assets/img/exmaple4.jpg) no-repeat center;background-size:cover;" /> -->
+                  <figcaption class="icon-text">教育业</figcaption>
+                </figure>
+                <figure class="img-block img-block-phone-b" v-if="button">
+                  <img class="big-img" src="./assets/img/exmaple5.jpg" style="width:100%;background-size:cover;" alt="旅游业"/>
+                  <!-- <img class="big-img" style="width:100%;background: url(./assets/img/exmaple5.jpg) no-repeat center;background-size:cover;" /> -->
+                  <figcaption class="icon-text">旅游业</figcaption>
+                </figure>
+                <figure class="img-block img-block-phone-b" v-if="button">
+                  <img class="big-img" src="./assets/img/exmaple6.jpg" style="width:100%;background-size:cover;" alt="零售业"/>
+                  <!-- <img class="big-img" style="width:100%;background: url(./assets/img/exmaple6.jpg) no-repeat center;background-size:cover;" /> -->
+                  <figcaption class="icon-text">零售业</figcaption>
+                </figure>
+                <figure class="img-block img-block-phone-b" v-if="button">
+                  <img class="big-img" src="./assets/img/exmaple7.jpg" style="width:100%;background-size:cover;" alt="通讯业"/>
+                  <!-- <img class="big-img" style="width:100%;background: url(./assets/img/exmaple7.jpg) no-repeat center;background-size:cover;"  /> -->
+                  <figcaption class="icon-text">通讯业</figcaption>
+                </figure>
+                <figure class="img-block img-block-phone-b" v-if="button">
+                  <img class="big-img" src="./assets/img/exmaple8.jpg" style="width:100%;background-size:cover;" alt="互联网"/>
+                  <!-- <img class="big-img" style="width:100%;background: url(./assets/img/exmaple8.jpg) no-repeat center;background-size:cover;" /> -->
+                  <figcaption class="icon-text">互联网</figcaption>
+                </figure>
+
+                <div class="to-button block-phone">
+                  <img src="./assets/img/for.png" v-if="button" @click="tapButton" alt="more"/>
+                </div>
+
+                <el-carousel class="el-carous-img el-carous-block img-block-phone-pc el-img text-align-center" width="100%" height="100%" arrow="never">
+                  <el-carousel-item>
+                    <figure class="img-block">
+                      <img class="big-img" src="./assets/img/exmaple0.jpg" style="width:100%;background-size:cover;" alt="汽车业"/>
+                      <!-- <div class="big-img" style="width:100%;background: url(./assets/img/exmaple0.jpg) no-repeat center;background-size:cover;"></div> -->
+                      <figcaption class="icon-text">汽车业</figcaption>
+                    </figure>
+                    <figure class="img-block img-block-center">
+                      <img class="big-img" src="./assets/img/exmaple1.jpg" style="width:100%;background-size:cover;" alt="通讯业"/>
+                      <!-- <div class="big-img" style="width:100%;background: url(./assets/img/exmaple1.jpg) no-repeat center;background-size:cover;"></div> -->
+                      <figcaption class="icon-text">通讯业</figcaption>
+                    </figure>
+                    <figure class="img-block">
+                      <img class="big-img" src="./assets/img/exmaple2.jpg" style="width:100%;background-size:cover;" alt="互联网"/>
+                      <!-- <div class="big-img" style="width:100%;background: url(./assets/img/exmaple2.jpg) no-repeat center;background-size:cover;"></div> -->
+                      <figcaption class="icon-text">互联网</figcaption>
+                    </figure>
+                  </el-carousel-item>
+
+                  <el-carousel-item>
+                    <figure class="img-block">
+                      <img class="big-img" src="./assets/img/exmaple3.jpg" style="width:100%;background-size:cover;" alt="地产业"/>
+                      <!-- <div class="big-img" style="width:100%;background: url(./assets/img/exmaple3.jpg) no-repeat center;background-size:cover;"></div> -->
+                      <figcaption class="icon-text">地产业</figcaption>
+                    </figure>
+                    <figure class="img-block img-block-center">
+                      <img class="big-img" src="./assets/img/exmaple4.jpg" style="width:100%;background-size:cover;" alt="教育业"/>
+                      <!-- <div class="big-img" style="width:100%;background: url(./assets/img/exmaple4.jpg) no-repeat center;background-size:cover;"></div> -->
+                      <figcaption class="icon-text">教育业</figcaption>
+                    </figure>
+                    <figure class="img-block">
+                      <img class="big-img" src="./assets/img/exmaple5.jpg" style="width:100%;background-size:cover;" alt="旅游业"/>
+                      <!-- <div class="big-img" style="width:100%;background: url(./assets/img/exmaple5.jpg) no-repeat center;background-size:cover;"></div> -->
+                      <figcaption class="icon-text">旅游业</figcaption>
+                    </figure>
+                  </el-carousel-item>
+                  <el-carousel-item>
+                    <figure class="img-block">
+                      <img class="big-img" src="./assets/img/exmaple6.jpg" style="width:100%;background-size:cover;" alt="零售业"/>
+                      <!-- <div class="big-img" style="width:100%;background: url(./assets/img/exmaple6.jpg) no-repeat center;background-size:cover;"></div> -->
+                      <figcaption class="icon-text">零售业</figcaption>
+                    </figure>
+                    <figure class="img-block img-block-center">
+                      <img class="big-img" src="./assets/img/exmaple7.jpg" style="width:100%;background-size:cover;" alt="美容业"/>
+                      <!-- <div class="big-img" style="width:100%;background: url(./assets/img/exmaple7.jpg) no-repeat center;background-size:cover;"></div> -->
+                      <figcaption class="icon-text">美容业</figcaption>
+                    </figure>
+                    <figure class="img-block">
+                      <img class="big-img" src="./assets/img/exmaple8.jpg" style="width:100%;background-size:cover;" alt="金融业"/>
+                      <!-- <div class="big-img" style="width:100%;background: url(./assets/img/exmaple8.jpg) no-repeat center;background-size:cover;"></div> -->
+                      <figcaption class="icon-text">金融业</figcaption>
+                    </figure>
+                  </el-carousel-item>
+                </el-carousel>
+
+              </div>
+          </div>
+      <!-- </div> -->
+    </div>
+    <!--合作伙伴-->
+    <div class="operate-block operate-block-phone  padding-center-pc padding-top-bottom">
+      <div>
+          <div class="title">合作伙伴</div>
+
+
+            <el-carousel class="el-carous-img el-product-phone" width="100%" height="100%" arrow="never" style="text-align:center;">
+              <el-carousel-item>
+                <div class="operate-img"> <img src="./assets/img/product_0.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_1.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_2.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_3.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_4.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_5.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_6.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_7.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_8.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_9.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_10.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_11.png"/> </div>
+              </el-carousel-item>
+
+              <el-carousel-item>
+                <div class="operate-img"> <img src="./assets/img/product_12.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_13.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_14.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_15.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_16.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_17.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_18.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_19.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_20.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_21.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_22.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_23.png"/> </div>
+              </el-carousel-item>
+
+              <el-carousel-item>
+                <div class="operate-img"> <img src="./assets/img/product_24.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_25.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_26.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_27.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_28.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_29.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_30.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_31.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_32.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_33.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_34.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_35.png"/> </div>
+              </el-carousel-item>
+
+            </el-carousel>
+
+            <el-carousel class="el-carous-img el-product-pc" width="100%" height="100%" arrow="never" style="text-align: center;">
+              <el-carousel-item>
+                <div class="operate-img"> <img src="./assets/img/product_0.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_1.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_2.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_3.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_4.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_5.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_6.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_7.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_8.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_9.png"/> </div>
+              </el-carousel-item>
+
+              <el-carousel-item>
+                <div class="operate-img"> <img src="./assets/img/product_10.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_11.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_12.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_13.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_14.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_15.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_16.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_17.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_18.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_19.png"/> </div>
+              </el-carousel-item>
+
+              <el-carousel-item>
+                <div class="operate-img"> <img src="./assets/img/product_20.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_21.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_22.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_23.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_24.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_25.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_26.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_27.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_28.png"/> </div>
+                <div class="operate-img"> <img src="./assets/img/product_29.png"/> </div>
+              </el-carousel-item>
+
+            </el-carousel>
+
+      </div>
+    </div>
+
+    <!--尾部  -->
+    <div class="foot foot-phone padding-center-pc" style="padding-top:30px;">
+        <div class="foot-text foot-text-phone">
+          <div class="">
+            <div class="foot-title foot-title-phone">关于我们</div>
+            <ul class="foot-ul foot-ul-phone">
+              <li><a href="about.html">公司简介</a></li>
+              <li><a href="about.html">发展历程</a></li>
+              <li><a href="news.html">新闻中心</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <div class="foot-title foot-title-phone">媒体介绍</div>
+            <ul class="foot-ul foot-ul-phone">
+              <li><a href="describe.html">媒体形式</a></li>
+              <li><a href="adavance.html">媒体优势</a></li>
+              <li><a href="describe.html">服务流程</a></li>
+            </ul>
+          </div>
+          <div class="">
+              <div class="foot-title foot-title-phone">联系方式</div>
+              <ul class="foot-ul foot-ul-phone no-flex">
+                <li>服务热线： 4000-055-066（周一至周日 09:00-22:00）</li>
+                <!-- <li>商务合作： 138-8888-8888 </li> -->
+                <li>总部地址： 深圳市福田区沙头街道天安社区泰然七路泰然科技园苍松大厦508 </li>
+              </ul>
+          </div>
+          <div class="">
+            <div class="foot-title foot-title-phone-cooperate">关注公众号</div>
+            <img class="foot-img" src="./assets/img/website.png" alt="关注公众号"/>
+          </div>
+        </div>
+
+      <!-- 版权 -->
+      <div class="foot-vision foot-vision-phone">
+        <div class="foot-vision-div">(C) 2012-2020 通众传媒 版权所有</div>
+        <div  class="foot-vision-div"><a href="http://www.beian.miit.gov.cn/">ICP备案号： 粤ICP备13027485号</a></div>
+      </div>
+      <div class="foot-address-phone icon-item no-fixed" style="position:relative;">
+          <img src="./assets/img/up.png" alt="phone"/>
+          <div>4000-055-066 电话咨询</div>
+      </div>
+      <div class="foot-address-phone icon-item no-fixed">
+          <img src="./assets/img/up.png"/>
+          <div><a class="phone-number" href='tel:4000-055-066'>4000-055-066 电话咨询</a></div>
+      </div>
+    </div>
+    <!-- end 尾部 -->
+
+  </div>
+
+  <script>
+  var vue =  new Vue({
+    el: '#vue',
+    data:{
+      operateSum: 20,
+      openSlide:false,
+      isTrue:true,
+      button:false,
+      imgArr:["./assets/img/nav0.png","./assets/img/nav1.png","./assets/img/nav2.png"]
+    },
+    methods:{
+      select:function(index){
+        this.selectIndex = index;
+      },
+      clickOpenSlide:function(e){
+        this.openSlide = true;
+      },
+      clickCloseSlide:function(e){
+        this.openSlide = false;
+      },
+      tapButton:function(e){
+        this.button = !this.button;
+      }
+    }
+  })
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,130 @@
+/* //步骤条 */
+.step-block{
+  padding:80px 0;
+}
+.step-bar{
+  margin: 0;
+  padding:0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  list-style-type: none;
+}
+.step-bar .step-item{
+  position: relative;
+  list-style-type: none;
+  height: 140px;
+  /* outline: 1px solid red; */
+}
+.step-bar .step-item-front{
+  list-style-type: none;
+  height: 120px;
+  /* outline: 1px solid red; */
+}
+.step-bar .step-item:nth-child(1){
+  font-size: 12px;
+  color: #333333;
+}
+.step-bar .step-item:nth-child(4){
+  font-size: 12px;
+  color: #333333;
+}
+.step-bar .step-item i{
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border:2px solid  #B40006;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+  /* margin: 0 80px; */
+}
+/* // 垂直画线 */
+.step-bar .step-item-front i::after {
+  content: '';
+  display: block;
+  clear: both;
+  width: 1px;
+  height: 120px;
+  background-color: #B40006;
+  margin: 0 auto;
+}
+/* // 垂直画线 */
+.step-bar .step-item i::after {
+  position: absolute;
+  top:18px;
+  margin: 0 7px;
+  content: '';
+  display: block;
+  clear: both;
+  width: 1px;
+  height: 120px;
+  background-color: #B40006;
+  padding: 0;
+}
+/* // 水平画线 */
+.step-bar .step-item i::before {
+  content: '';
+  display: block;
+  clear: both;
+  width: 120px;
+  height: 1px;
+  background-color: #B40006;
+  margin: 10px 18px;
+}
+/* // 水平画线 */
+.step-bar .step-item .line-left::before {
+  content: '';
+  display: block;
+  clear: both;
+  width: 120px;
+  height: 1px;
+  background-color: #B40006;
+  margin: 10px -120px;
+}
+/* 小圆点 */
+.step-bar .step-item span{
+  position: absolute;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border:1px solid  #B40006;
+  border-radius: 5px;
+  top:10px;
+  right: 399px;
+}
+.step-bar .step-item .span-left{
+  left: 401px;
+}
+/*  */
+.step-item > div{
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+}
+
+/* // 图文布局 */
+.title{
+  font-size: 16px;
+  font-weight: bold;
+}
+.title-icon{
+  padding:40rpx 0;
+}
+/* .img-block{
+  display: inline-block;
+  width: 200px;
+  outline: 1px solid red;
+  padding:25px 12px;
+  margin:20px 60px;
+} */
+.white-img{
+  width:70px;
+  height: 70px;
+}
+.text-content{
+  font-size: 14px;
+  text-align: left;
+}
